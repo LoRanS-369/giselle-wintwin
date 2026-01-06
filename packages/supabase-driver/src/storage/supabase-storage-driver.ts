@@ -43,7 +43,7 @@ export function supabaseStorageDriver(
 ): GiselleStorage {
 	const client = new S3Client({
 		endpoint: config.endpoint,
-		region: config.region,
+		region: config.region || "us-east-1", // Fallback to prevent build-time errors
 		credentials: {
 			accessKeyId: config.accessKeyId,
 			secretAccessKey: config.secretAccessKey,
