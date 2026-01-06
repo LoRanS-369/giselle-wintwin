@@ -1,0 +1,872 @@
+time="2026-01-06T11:59:23+01:00" level=warning msg="C:\\Users\\Laurent\\Documents\\wintwin-market\\ai-stack\\giselle\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#1 [internal] load local bake definitions
+#1 reading from stdin 582B 0.1s done
+#1 DONE 0.2s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 600B 0.0s done
+#2 DONE 0.4s
+
+#3 [internal] load metadata for docker.io/library/node:22-alpine
+#3 DONE 1.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B 0.0s done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [base 1/1] FROM docker.io/library/node:22-alpine@sha256:0340fa682d72068edf603c305bfbc10e23219fb0e40df58d9ea4d6f33a9798bf
+#6 resolve docker.io/library/node:22-alpine@sha256:0340fa682d72068edf603c305bfbc10e23219fb0e40df58d9ea4d6f33a9798bf
+#6 resolve docker.io/library/node:22-alpine@sha256:0340fa682d72068edf603c305bfbc10e23219fb0e40df58d9ea4d6f33a9798bf 0.3s done
+#6 DONE 0.3s
+
+#7 [runner 1/3] WORKDIR /app
+#7 CACHED
+
+#8 [runner 2/3] RUN npm install -g pnpm
+#8 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 179.17kB 0.6s done
+#5 DONE 0.7s
+
+#9 [builder 1/6] RUN apk add --no-cache libc6-compat
+#9 CACHED
+
+#10 [builder 2/6] WORKDIR /app
+#10 CACHED
+
+#11 [builder 3/6] RUN npm install -g pnpm turbo
+#11 CACHED
+
+#12 [builder 4/6] COPY . .
+#12 DONE 8.5s
+
+#13 [builder 5/6] RUN pnpm install
+#13 19.40 Scope: all 34 workspace projects
+#13 20.26 Lockfile is up to date, resolution step is skipped
+#13 21.02 Progress: resolved 1, reused 0, downloaded 0, added 0
+#13 23.34 Packages: +1458
+#13 23.34 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#13 23.64 Progress: resolved 1458, reused 0, downloaded 0, added 0
+#13 25.52 Progress: resolved 1458, reused 0, downloaded 1, added 0
+#13 26.65 Progress: resolved 1458, reused 0, downloaded 29, added 0
+#13 27.65 Progress: resolved 1458, reused 0, downloaded 91, added 0
+#13 28.69 Progress: resolved 1458, reused 0, downloaded 114, added 0
+#13 29.75 Progress: resolved 1458, reused 0, downloaded 132, added 16
+#13 30.84 Progress: resolved 1458, reused 0, downloaded 161, added 66
+#13 31.95 Progress: resolved 1458, reused 0, downloaded 202, added 121
+#13 32.95 Progress: resolved 1458, reused 0, downloaded 232, added 172
+#13 34.04 Progress: resolved 1458, reused 0, downloaded 257, added 213
+#13 35.05 Progress: resolved 1458, reused 0, downloaded 276, added 275
+#13 36.05 Progress: resolved 1458, reused 0, downloaded 302, added 300
+#13 37.05 Progress: resolved 1458, reused 0, downloaded 328, added 326
+#13 38.05 Progress: resolved 1458, reused 0, downloaded 350, added 350
+#13 39.05 Progress: resolved 1458, reused 0, downloaded 387, added 387
+#13 40.05 Progress: resolved 1458, reused 0, downloaded 416, added 415
+#13 41.06 Progress: resolved 1458, reused 0, downloaded 433, added 431
+#13 42.06 Progress: resolved 1458, reused 0, downloaded 448, added 447
+#13 43.06 Progress: resolved 1458, reused 0, downloaded 479, added 479
+#13 44.07 Progress: resolved 1458, reused 0, downloaded 498, added 500
+#13 45.07 Progress: resolved 1458, reused 0, downloaded 527, added 531
+#13 46.07 Progress: resolved 1458, reused 0, downloaded 554, added 556
+#13 47.12 Progress: resolved 1458, reused 0, downloaded 578, added 578
+#13 48.12 Progress: resolved 1458, reused 0, downloaded 613, added 617
+#13 49.12 Progress: resolved 1458, reused 0, downloaded 624, added 627
+#13 50.20 Progress: resolved 1458, reused 0, downloaded 629, added 632
+#13 51.23 Progress: resolved 1458, reused 0, downloaded 644, added 641
+#13 52.24 Progress: resolved 1458, reused 0, downloaded 684, added 687
+#13 53.24 Progress: resolved 1458, reused 0, downloaded 715, added 718
+#13 54.25 Progress: resolved 1458, reused 0, downloaded 771, added 774
+#13 55.24 Progress: resolved 1458, reused 0, downloaded 792, added 796
+#13 56.35 Progress: resolved 1458, reused 0, downloaded 825, added 828
+#13 57.35 Progress: resolved 1458, reused 0, downloaded 848, added 852
+#13 58.41 Progress: resolved 1458, reused 0, downloaded 871, added 874
+#13 59.41 Progress: resolved 1458, reused 0, downloaded 892, added 896
+#13 60.51 Progress: resolved 1458, reused 0, downloaded 916, added 919
+#13 61.52 Progress: resolved 1458, reused 0, downloaded 945, added 947
+#13 62.52 Progress: resolved 1458, reused 0, downloaded 966, added 970
+#13 63.52 Progress: resolved 1458, reused 0, downloaded 981, added 984
+#13 64.52 Progress: resolved 1458, reused 0, downloaded 1004, added 1007
+#13 65.52 Progress: resolved 1458, reused 0, downloaded 1029, added 1033
+#13 66.52 Progress: resolved 1458, reused 0, downloaded 1056, added 1060
+#13 67.52 Progress: resolved 1458, reused 0, downloaded 1070, added 1073
+#13 68.54 Progress: resolved 1458, reused 0, downloaded 1100, added 1103
+#13 69.54 Progress: resolved 1458, reused 0, downloaded 1127, added 1132
+#13 70.54 Progress: resolved 1458, reused 0, downloaded 1142, added 1144
+#13 71.54 Progress: resolved 1458, reused 0, downloaded 1161, added 1166
+#13 72.54 Progress: resolved 1458, reused 0, downloaded 1187, added 1190
+#13 73.58 Progress: resolved 1458, reused 0, downloaded 1209, added 1213
+#13 74.58 Progress: resolved 1458, reused 0, downloaded 1220, added 1225
+#13 75.66 Progress: resolved 1458, reused 0, downloaded 1252, added 1257
+#13 76.67 Progress: resolved 1458, reused 0, downloaded 1267, added 1271
+#13 77.68 Progress: resolved 1458, reused 0, downloaded 1300, added 1305
+#13 78.69 Progress: resolved 1458, reused 0, downloaded 1323, added 1328
+#13 79.68 Progress: resolved 1458, reused 0, downloaded 1330, added 1335
+#13 80.68 Progress: resolved 1458, reused 0, downloaded 1350, added 1355
+#13 81.68 Progress: resolved 1458, reused 0, downloaded 1362, added 1367
+#13 82.68 Progress: resolved 1458, reused 0, downloaded 1364, added 1367
+#13 83.73 Progress: resolved 1458, reused 0, downloaded 1384, added 1387
+#13 84.74 Progress: resolved 1458, reused 0, downloaded 1396, added 1398
+#13 85.74 Progress: resolved 1458, reused 0, downloaded 1413, added 1416
+#13 86.75 Progress: resolved 1458, reused 0, downloaded 1439, added 1443
+#13 87.75 Progress: resolved 1458, reused 0, downloaded 1444, added 1448
+#13 89.48 Progress: resolved 1458, reused 0, downloaded 1444, added 1449
+#13 90.59 Progress: resolved 1458, reused 0, downloaded 1445, added 1450
+#13 92.41 Progress: resolved 1458, reused 0, downloaded 1446, added 1450
+#13 94.21 Progress: resolved 1458, reused 0, downloaded 1446, added 1451
+#13 95.21 Progress: resolved 1458, reused 0, downloaded 1447, added 1452
+#13 96.80 Progress: resolved 1458, reused 0, downloaded 1448, added 1452
+#13 97.80 Progress: resolved 1458, reused 0, downloaded 1449, added 1453
+#13 98.80 Progress: resolved 1458, reused 0, downloaded 1450, added 1454
+#13 100.8 Progress: resolved 1458, reused 0, downloaded 1450, added 1455
+#13 102.0 Progress: resolved 1458, reused 0, downloaded 1451, added 1455
+#13 103.1 Progress: resolved 1458, reused 0, downloaded 1451, added 1456
+#13 104.2 Progress: resolved 1458, reused 0, downloaded 1452, added 1456
+#13 105.2 Progress: resolved 1458, reused 0, downloaded 1452, added 1457
+#13 114.0 Progress: resolved 1458, reused 0, downloaded 1453, added 1457
+#13 116.5 Progress: resolved 1458, reused 0, downloaded 1453, added 1458
+#13 116.5 Progress: resolved 1458, reused 0, downloaded 1453, added 1458, done
+#13 149.7 
+#13 149.7 devDependencies:
+#13 149.7 + @biomejs/biome 2.0.6
+#13 149.7 + @changesets/cli 2.28.1
+#13 149.7 + @types/node 22.14.0
+#13 149.7 + knip 5.67.1
+#13 149.7 + turbo 2.4.2
+#13 149.7 + typescript 5.7.3
+#13 149.7 
+#13 149.7 Ôò¡ Warning ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò«
+#13 149.7 Ôöé                                                                              Ôöé
+#13 149.7 Ôöé   Ignored build scripts: @sentry/cli, @tailwindcss/oxide,                    Ôöé
+#13 149.7 Ôöé   @vercel/speed-insights, bufferutil, core-js, esbuild, protobufjs, sharp,   Ôöé
+#13 149.7 Ôöé   utf-8-validate.                                                            Ôöé
+#13 149.7 Ôöé   Run "pnpm approve-builds" to pick which dependencies should be allowed     Ôöé
+#13 149.7 Ôöé   to run scripts.                                                            Ôöé
+#13 149.7 Ôöé                                                                              Ôöé
+#13 149.7 Ôò░ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔò»
+#13 149.7 
+#13 150.9 apps/studio.giselles.ai postinstall$ node ./scripts/copy-pdfium-wasm.mjs
+#13 151.5 apps/studio.giselles.ai postinstall: Copied pdfium.wasm -> lib/vector-stores/document/ingest/pdfium.wasm
+#13 151.6 apps/studio.giselles.ai postinstall: Done
+#13 152.3 Done in 2m 15.9s using pnpm v10.16.0
+#13 DONE 157.7s
+
+#14 [builder 6/6] RUN turbo build --filter=studio.giselles.ai
+#14 15.69 
+#14 15.69 Attention:
+#14 15.69 Turborepo now collects completely anonymous telemetry regarding usage.
+#14 15.69 This information is used to shape the Turborepo roadmap and prioritize features.
+#14 15.69 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#14 15.69 https://turbo.build/repo/docs/telemetry
+#14 15.69 
+#14 15.69 turbo 2.4.2
+#14 15.69 
+#14 16.63 ÔÇó Packages in scope: studio.giselles.ai
+#14 16.63 ÔÇó Running build in 1 packages
+#14 16.63 ÔÇó Remote caching disabled
+#14 17.85 @giselles-ai/github-tool:generate-output: cache miss, executing 8c6eec59f7f47ef0
+#14 17.87 @giselles-ai/utils:build: cache miss, executing b12a1813a129dc28
+#14 17.91 @giselles-ai/document-preprocessor:build: cache miss, executing 6f250f2f19ebdd8d
+#14 17.96 @giselles-ai/language-model:build: cache miss, executing f5ad64ed5be20d36
+#14 17.99 @giselles-ai/storage:build: cache miss, executing f7950d7975807310
+#14 18.01 @giselles-ai/vault:build: cache miss, executing 922e1dcb80370f97
+#14 18.05 @giselles-ai/language-model-registry:build: cache miss, executing 3db5bb0357e38b51
+#14 18.08 @giselles-ai/web-search:build: cache miss, executing 88dd29a02c1000e8
+#14 18.14 @giselles-ai/logger:build: cache miss, executing 5cdc5f4de1908f18
+#14 24.48 @giselles-ai/document-preprocessor:build: 
+#14 24.48 @giselles-ai/document-preprocessor:build: > @giselles-ai/document-preprocessor@0.1.0 build /app/packages/document-preprocessor
+#14 24.48 @giselles-ai/document-preprocessor:build: > tsup
+#14 24.48 @giselles-ai/document-preprocessor:build: 
+#14 24.48 @giselles-ai/utils:build: 
+#14 24.48 @giselles-ai/utils:build: > @giselles-ai/utils@0.0.0 build /app/packages/utils
+#14 24.48 @giselles-ai/utils:build: > tsup
+#14 24.48 @giselles-ai/utils:build: 
+#14 24.60 @giselles-ai/github-tool:generate-output: 
+#14 24.60 @giselles-ai/github-tool:generate-output: > @giselles-ai/github-tool@0.0.0 generate-output /app/packages/github-tool
+#14 24.60 @giselles-ai/github-tool:generate-output: > gql-tada generate-output
+#14 24.60 @giselles-ai/github-tool:generate-output: 
+#14 24.77 @giselles-ai/logger:build: 
+#14 24.77 @giselles-ai/logger:build: > @giselles-ai/logger@0.0.0 build /app/packages/logger
+#14 24.77 @giselles-ai/logger:build: > tsup
+#14 24.77 @giselles-ai/logger:build: 
+#14 24.80 @giselles-ai/language-model:build: 
+#14 24.80 @giselles-ai/language-model:build: > @giselles-ai/language-model@0.0.0 build /app/packages/language-model
+#14 24.80 @giselles-ai/language-model:build: > tsup
+#14 24.80 @giselles-ai/language-model:build: 
+#14 24.87 @giselles-ai/language-model-registry:build: 
+#14 24.87 @giselles-ai/language-model-registry:build: > @giselles-ai/language-model-registry@0.0.0 build /app/packages/language-model-registry
+#14 24.88 @giselles-ai/language-model-registry:build: > tsup
+#14 24.88 @giselles-ai/language-model-registry:build: 
+#14 24.91 @giselles-ai/storage:build: 
+#14 24.91 @giselles-ai/storage:build: > @giselles-ai/storage@0.0.0 build /app/packages/storage
+#14 24.91 @giselles-ai/storage:build: > tsup
+#14 24.91 @giselles-ai/storage:build: 
+#14 24.96 @giselles-ai/vault:build: 
+#14 24.97 @giselles-ai/vault:build: > @giselles-ai/vault@0.0.0 build /app/packages/vault
+#14 24.97 @giselles-ai/vault:build: > tsup
+#14 24.97 @giselles-ai/vault:build: 
+#14 25.05 @giselles-ai/web-search:build: 
+#14 25.05 @giselles-ai/web-search:build: > @giselles-ai/web-search@0.0.0 build /app/packages/web-search
+#14 25.05 @giselles-ai/web-search:build: > tsup
+#14 25.05 @giselles-ai/web-search:build: 
+#14 28.04 @giselles-ai/utils:build: CLI Building entry: src/index.ts
+#14 28.05 @giselles-ai/document-preprocessor:build: CLI Building entry: src/index.ts
+#14 28.05 @giselles-ai/utils:build: CLI Using tsconfig: tsconfig.json
+#14 28.05 @giselles-ai/document-preprocessor:build: CLI Using tsconfig: tsconfig.json
+#14 28.06 @giselles-ai/document-preprocessor:build: CLI tsup v8.3.5
+#14 28.06 @giselles-ai/document-preprocessor:build: CLI Using tsup config: /app/packages/document-preprocessor/tsup.config.ts
+#14 28.07 @giselles-ai/utils:build: CLI tsup v8.3.5
+#14 28.08 @giselles-ai/utils:build: CLI Using tsup config: /app/packages/utils/tsup.config.ts
+#14 28.15 @giselles-ai/document-preprocessor:build: CLI Target: node18
+#14 28.20 @giselles-ai/document-preprocessor:build: CLI Cleaning output folder
+#14 28.22 @giselles-ai/utils:build: CLI Target: esnext
+#14 28.24 @giselles-ai/document-preprocessor:build: CJS Build start
+#14 28.24 @giselles-ai/document-preprocessor:build: ESM Build start
+#14 28.25 @giselles-ai/language-model:build: CLI Building entry: src/index.ts
+#14 28.26 @giselles-ai/language-model:build: CLI Using tsconfig: tsconfig.json
+#14 28.27 @giselles-ai/utils:build: CJS Build start
+#14 28.27 @giselles-ai/utils:build: ESM Build start
+#14 28.29 @giselles-ai/language-model:build: CLI tsup v8.3.5
+#14 28.29 @giselles-ai/language-model:build: CLI Using tsup config: /app/packages/language-model/tsup.config.ts
+#14 28.29 @giselles-ai/logger:build: CLI Building entry: src/index.ts
+#14 28.29 @giselles-ai/logger:build: CLI Using tsconfig: tsconfig.json
+#14 28.29 @giselles-ai/logger:build: CLI tsup v8.3.5
+#14 28.29 @giselles-ai/logger:build: CLI Using tsup config: /app/packages/logger/tsup.config.ts
+#14 28.33 @giselles-ai/language-model-registry:build: CLI Building entry: src/index.ts
+#14 28.34 @giselles-ai/language-model-registry:build: CLI Using tsconfig: tsconfig.json
+#14 28.35 @giselles-ai/logger:build: CLI Target: esnext
+#14 28.37 @giselles-ai/language-model-registry:build: CLI tsup v8.3.5
+#14 28.37 @giselles-ai/language-model-registry:build: CLI Using tsup config: /app/packages/language-model-registry/tsup.config.ts
+#14 28.38 @giselles-ai/logger:build: CJS Build start
+#14 28.39 @giselles-ai/logger:build: ESM Build start
+#14 28.47 @giselles-ai/storage:build: CLI Building entry: src/index.ts
+#14 28.49 @giselles-ai/language-model-registry:build: CLI Target: esnext
+#14 28.49 @giselles-ai/language-model:build: CLI Target: esnext
+#14 28.50 @giselles-ai/language-model-registry:build: CJS Build start
+#14 28.50 @giselles-ai/language-model-registry:build: ESM Build start
+#14 28.51 @giselles-ai/storage:build: CLI Using tsconfig: tsconfig.json
+#14 28.51 @giselles-ai/web-search:build: CLI Building entry: src/index.ts
+#14 28.52 @giselles-ai/web-search:build: CLI Using tsconfig: tsconfig.json
+#14 28.56 @giselles-ai/language-model:build: CJS Build start
+#14 28.57 @giselles-ai/storage:build: CLI tsup v8.3.5
+#14 28.57 @giselles-ai/storage:build: CLI Using tsup config: /app/packages/storage/tsup.config.ts
+#14 28.57 @giselles-ai/web-search:build: CLI tsup v8.3.5
+#14 28.57 @giselles-ai/web-search:build: CLI Using tsup config: /app/packages/web-search/tsup.config.ts
+#14 28.57 @giselles-ai/language-model:build: ESM Build start
+#14 28.66 @giselles-ai/logger:build: CJS dist/index.js     1.19 KB
+#14 28.66 @giselles-ai/logger:build: CJS dist/index.js.map 576.00 B
+#14 28.67 @giselles-ai/logger:build: CJS ÔÜí´©Å Build success in 282ms
+#14 28.67 @giselles-ai/logger:build: ESM dist/index.mjs     190.00 B
+#14 28.67 @giselles-ai/utils:build: CJS dist/index.js     3.75 KB
+#14 28.67 @giselles-ai/utils:build: CJS dist/index.js.map 4.59 KB
+#14 28.68 @giselles-ai/utils:build: CJS ÔÜí´©Å Build success in 401ms
+#14 28.68 @giselles-ai/logger:build: ESM dist/index.mjs.map 443.00 B
+#14 28.68 @giselles-ai/logger:build: ESM ÔÜí´©Å Build success in 299ms
+#14 28.71 @giselles-ai/utils:build: ESM dist/index.mjs     1.95 KB
+#14 28.71 @giselles-ai/utils:build: ESM dist/index.mjs.map 4.43 KB
+#14 28.71 @giselles-ai/utils:build: ESM ÔÜí´©Å Build success in 420ms
+#14 28.72 @giselles-ai/storage:build: CLI Target: esnext
+#14 28.73 @giselles-ai/storage:build: CJS Build start
+#14 28.73 @giselles-ai/storage:build: ESM Build start
+#14 28.80 @giselles-ai/web-search:build: CLI Target: esnext
+#14 28.86 @giselles-ai/web-search:build: CLI Cleaning output folder
+#14 28.92 @giselles-ai/web-search:build: ESM Build start
+#14 28.92 @giselles-ai/web-search:build: CJS Build start
+#14 28.94 @giselles-ai/document-preprocessor:build: ESM dist/index.mjs     14.45 KB
+#14 28.95 @giselles-ai/vault:build: CLI Building entry: src/index.ts
+#14 28.96 @giselles-ai/document-preprocessor:build: ESM dist/index.mjs.map 29.85 KB
+#14 28.96 @giselles-ai/document-preprocessor:build: ESM ÔÜí´©Å Build success in 720ms
+#14 28.96 @giselles-ai/document-preprocessor:build: CJS dist/index.js     15.62 KB
+#14 28.96 @giselles-ai/document-preprocessor:build: CJS dist/index.js.map 30.31 KB
+#14 28.96 @giselles-ai/document-preprocessor:build: CJS ÔÜí´©Å Build success in 721ms
+#14 28.96 @giselles-ai/vault:build: CLI Using tsconfig: tsconfig.json
+#14 28.97 @giselles-ai/vault:build: CLI tsup v8.3.5
+#14 28.98 @giselles-ai/vault:build: CLI Using tsup config: /app/packages/vault/tsup.config.ts
+#14 29.14 @giselles-ai/vault:build: CLI Target: esnext
+#14 29.18 @giselles-ai/vault:build: CJS Build start
+#14 29.22 @giselles-ai/vault:build: ESM Build start
+#14 29.35 @giselles-ai/storage:build: ESM dist/index.mjs     10.27 KB
+#14 29.35 @giselles-ai/storage:build: ESM dist/index.mjs.map 21.22 KB
+#14 29.35 @giselles-ai/storage:build: ESM ÔÜí´©Å Build success in 615ms
+#14 29.36 @giselles-ai/storage:build: CJS dist/index.js     11.84 KB
+#14 29.36 @giselles-ai/storage:build: CJS dist/index.js.map 21.49 KB
+#14 29.36 @giselles-ai/storage:build: CJS ÔÜí´©Å Build success in 623ms
+#14 29.42 @giselles-ai/language-model-registry:build: CJS dist/index.js     45.79 KB
+#14 29.43 @giselles-ai/language-model-registry:build: CJS dist/index.js.map 88.00 KB
+#14 29.43 @giselles-ai/language-model-registry:build: CJS ÔÜí´©Å Build success in 927ms
+#14 29.47 @giselles-ai/language-model-registry:build: ESM dist/index.mjs     43.18 KB
+#14 29.47 @giselles-ai/language-model-registry:build: ESM dist/index.mjs.map 87.70 KB
+#14 29.47 @giselles-ai/language-model-registry:build: ESM ÔÜí´©Å Build success in 966ms
+#14 29.55 @giselles-ai/language-model:build: CJS dist/index.js     34.36 KB
+#14 29.55 @giselles-ai/language-model:build: CJS dist/index.js.map 69.69 KB
+#14 29.56 @giselles-ai/language-model:build: CJS ÔÜí´©Å Build success in 987ms
+#14 29.58 @giselles-ai/language-model:build: ESM dist/index.mjs     31.02 KB
+#14 29.58 @giselles-ai/language-model:build: ESM dist/index.mjs.map 69.22 KB
+#14 29.58 @giselles-ai/language-model:build: ESM ÔÜí´©Å Build success in 1014ms
+#14 29.59 @giselles-ai/web-search:build: ESM dist/index.mjs     2.17 KB
+#14 29.60 @giselles-ai/vault:build: CJS dist/index.js     1.56 KB
+#14 29.60 @giselles-ai/vault:build: CJS dist/index.js.map 1.32 KB
+#14 29.61 @giselles-ai/vault:build: CJS ÔÜí´©Å Build success in 417ms
+#14 29.61 @giselles-ai/web-search:build: ESM dist/index.mjs.map 6.09 KB
+#14 29.61 @giselles-ai/web-search:build: ESM ÔÜí´©Å Build success in 687ms
+#14 29.61 @giselles-ai/vault:build: ESM dist/index.mjs     532.00 B
+#14 29.61 @giselles-ai/vault:build: ESM dist/index.mjs.map 1.15 KB
+#14 29.61 @giselles-ai/vault:build: ESM ÔÜí´©Å Build success in 412ms
+#14 29.61 @giselles-ai/web-search:build: CJS dist/index.js     3.91 KB
+#14 29.61 @giselles-ai/web-search:build: CJS dist/index.js.map 6.15 KB
+#14 29.61 @giselles-ai/web-search:build: CJS ÔÜí´©Å Build success in 687ms
+#14 31.34 @giselles-ai/utils:build: DTS Build start
+#14 31.43 @giselles-ai/language-model-registry:build: DTS Build start
+#14 31.46 @giselles-ai/logger:build: DTS Build start
+#14 31.51 @giselles-ai/document-preprocessor:build: DTS Build start
+#14 31.57 @giselles-ai/language-model:build: DTS Build start
+#14 31.72 @giselles-ai/web-search:build: DTS Build start
+#14 31.72 @giselles-ai/vault:build: DTS Build start
+#14 31.80 @giselles-ai/storage:build: DTS Build start
+#14 43.21 @giselles-ai/github-tool:generate-output: Ô£ô Introspection output was generated successfully
+#14 43.22 @giselles-ai/github-tool:generate-output: 
+#14 43.31 @giselles-ai/vault:build: DTS ÔÜí´©Å Build success in 11591ms
+#14 43.32 @giselles-ai/vault:build: DTS dist/index.d.ts  1.30 KB
+#14 43.32 @giselles-ai/vault:build: DTS dist/index.d.mts 1.30 KB
+#14 43.72 @giselles-ai/logger:build: DTS ÔÜí´©Å Build success in 12260ms
+#14 43.72 @giselles-ai/logger:build: DTS dist/index.d.ts  190.00 B
+#14 43.72 @giselles-ai/logger:build: DTS dist/index.d.mts 190.00 B
+#14 46.02 @giselles-ai/storage:build: DTS ÔÜí´©Å Build success in 14223ms
+#14 46.04 @giselles-ai/storage:build: DTS dist/index.d.ts  2.12 KB
+#14 46.04 @giselles-ai/storage:build: DTS dist/index.d.mts 2.12 KB
+#14 46.56 @giselles-ai/document-preprocessor:build: DTS ÔÜí´©Å Build success in 15049ms
+#14 46.56 @giselles-ai/document-preprocessor:build: DTS dist/index.d.ts  1.81 KB
+#14 46.56 @giselles-ai/document-preprocessor:build: DTS dist/index.d.mts 1.81 KB
+#14 46.77 @giselles-ai/supabase-driver:build: cache miss, executing 70e677f233d260b3
+#14 47.66 @giselles-ai/utils:build: DTS ÔÜí´©Å Build success in 16335ms
+#14 47.66 @giselles-ai/utils:build: DTS dist/index.d.ts  1.26 KB
+#14 47.66 @giselles-ai/utils:build: DTS dist/index.d.mts 1.26 KB
+#14 48.22 @giselles-ai/trigger-registry:build: cache miss, executing 4b471d1961005807
+#14 48.27 @giselles-ai/action-registry:build: cache miss, executing 47977faa2f34bb85
+#14 49.75 @giselles-ai/web-search:build: DTS ÔÜí´©Å Build success in 18040ms
+#14 49.76 @giselles-ai/web-search:build: DTS dist/index.d.mts 1.73 KB
+#14 49.76 @giselles-ai/web-search:build: DTS dist/index.d.ts  1.73 KB
+#14 51.35 @giselles-ai/language-model:build: DTS ÔÜí´©Å Build success in 19778ms
+#14 51.35 @giselles-ai/language-model:build: DTS dist/index.d.ts  31.12 KB
+#14 51.35 @giselles-ai/language-model:build: DTS dist/index.d.mts 31.12 KB
+#14 52.65 @giselles-ai/supabase-driver:build: 
+#14 52.65 @giselles-ai/supabase-driver:build: > @giselles-ai/supabase-driver@0.0.0 build /app/packages/supabase-driver
+#14 52.65 @giselles-ai/supabase-driver:build: > tsup
+#14 52.65 @giselles-ai/supabase-driver:build: 
+#14 53.73 @giselles-ai/trigger-registry:build: 
+#14 53.73 @giselles-ai/trigger-registry:build: > @giselles-ai/trigger-registry@0.0.0 build /app/packages/trigger-registry
+#14 53.73 @giselles-ai/trigger-registry:build: > tsup
+#14 53.73 @giselles-ai/trigger-registry:build: 
+#14 53.77 @giselles-ai/action-registry:build: 
+#14 53.77 @giselles-ai/action-registry:build: > @giselles-ai/action-registry@0.0.0 build /app/packages/action-registry
+#14 53.77 @giselles-ai/action-registry:build: > tsup
+#14 53.77 @giselles-ai/action-registry:build: 
+#14 54.35 @giselles-ai/language-model-registry:build: DTS ÔÜí´©Å Build success in 22924ms
+#14 54.35 @giselles-ai/language-model-registry:build: DTS dist/index.d.ts  87.70 KB
+#14 54.35 @giselles-ai/language-model-registry:build: DTS dist/index.d.mts 87.70 KB
+#14 54.90 @giselles-ai/supabase-driver:build: CLI Building entry: src/index.ts
+#14 54.91 @giselles-ai/supabase-driver:build: CLI Using tsconfig: tsconfig.json
+#14 54.92 @giselles-ai/supabase-driver:build: CLI tsup v8.3.5
+#14 54.92 @giselles-ai/supabase-driver:build: CLI Using tsup config: /app/packages/supabase-driver/tsup.config.ts
+#14 55.00 @giselles-ai/supabase-driver:build: CLI Target: esnext
+#14 55.01 @giselles-ai/supabase-driver:build: CJS Build start
+#14 55.02 @giselles-ai/supabase-driver:build: ESM Build start
+#14 55.18 @giselles-ai/supabase-driver:build: ESM dist/index.mjs     5.41 KB
+#14 55.18 @giselles-ai/supabase-driver:build: ESM dist/index.mjs.map 11.79 KB
+#14 55.18 @giselles-ai/supabase-driver:build: ESM ÔÜí´©Å Build success in 161ms
+#14 55.19 @giselles-ai/supabase-driver:build: CJS dist/index.js     6.57 KB
+#14 55.19 @giselles-ai/supabase-driver:build: CJS dist/index.js.map 11.89 KB
+#14 55.19 @giselles-ai/supabase-driver:build: CJS ÔÜí´©Å Build success in 166ms
+#14 55.90 @giselles-ai/trigger-registry:build: CLI Building entry: src/index.ts
+#14 55.90 @giselles-ai/trigger-registry:build: CLI Using tsconfig: tsconfig.json
+#14 55.91 @giselles-ai/trigger-registry:build: CLI tsup v8.3.5
+#14 55.91 @giselles-ai/trigger-registry:build: CLI Using tsup config: /app/packages/trigger-registry/tsup.config.ts
+#14 55.97 @giselles-ai/trigger-registry:build: CLI Target: esnext
+#14 55.99 @giselles-ai/trigger-registry:build: CJS Build start
+#14 55.99 @giselles-ai/trigger-registry:build: ESM Build start
+#14 56.11 @giselles-ai/action-registry:build: CLI Building entry: src/index.ts
+#14 56.12 @giselles-ai/action-registry:build: CLI Using tsconfig: tsconfig.json
+#14 56.14 @giselles-ai/action-registry:build: CLI tsup v8.3.5
+#14 56.14 @giselles-ai/action-registry:build: CLI Using tsup config: /app/packages/action-registry/tsup.config.ts
+#14 56.18 @giselles-ai/trigger-registry:build: ESM dist/index.mjs     8.85 KB
+#14 56.18 @giselles-ai/trigger-registry:build: ESM dist/index.mjs.map 17.51 KB
+#14 56.18 @giselles-ai/trigger-registry:build: ESM ÔÜí´©Å Build success in 188ms
+#14 56.19 @giselles-ai/trigger-registry:build: CJS dist/index.js     12.74 KB
+#14 56.19 @giselles-ai/trigger-registry:build: CJS dist/index.js.map 18.08 KB
+#14 56.19 @giselles-ai/trigger-registry:build: CJS ÔÜí´©Å Build success in 196ms
+#14 56.20 @giselles-ai/action-registry:build: CLI Target: esnext
+#14 56.21 @giselles-ai/action-registry:build: CJS Build start
+#14 56.21 @giselles-ai/action-registry:build: ESM Build start
+#14 56.34 @giselles-ai/action-registry:build: ESM dist/index.mjs     3.86 KB
+#14 56.34 @giselles-ai/action-registry:build: ESM dist/index.mjs.map 7.30 KB
+#14 56.34 @giselles-ai/action-registry:build: ESM ÔÜí´©Å Build success in 120ms
+#14 56.35 @giselles-ai/action-registry:build: CJS dist/index.js     6.25 KB
+#14 56.35 @giselles-ai/action-registry:build: CJS dist/index.js.map 7.42 KB
+#14 56.35 @giselles-ai/action-registry:build: CJS ÔÜí´©Å Build success in 131ms
+#14 56.77 @giselles-ai/supabase-driver:build: DTS Build start
+#14 57.79 @giselles-ai/trigger-registry:build: DTS Build start
+#14 58.01 @giselles-ai/action-registry:build: DTS Build start
+#14 68.51 @giselles-ai/action-registry:build: DTS ÔÜí´©Å Build success in 10508ms
+#14 68.51 @giselles-ai/action-registry:build: DTS dist/index.d.ts  12.23 KB
+#14 68.51 @giselles-ai/action-registry:build: DTS dist/index.d.mts 12.23 KB
+#14 69.53 @giselles-ai/trigger-registry:build: DTS ÔÜí´©Å Build success in 11745ms
+#14 69.54 @giselles-ai/trigger-registry:build: DTS dist/index.d.ts  28.79 KB
+#14 69.54 @giselles-ai/trigger-registry:build: DTS dist/index.d.mts 28.79 KB
+#14 70.10 @giselles-ai/protocol:build: cache miss, executing f1a20ceac7a1e606
+#14 71.18 @giselles-ai/supabase-driver:build: DTS ÔÜí´©Å Build success in 14414ms
+#14 71.19 @giselles-ai/supabase-driver:build: DTS dist/index.d.ts  727.00 B
+#14 71.19 @giselles-ai/supabase-driver:build: DTS dist/index.d.mts 727.00 B
+#14 76.80 @giselles-ai/protocol:build: 
+#14 76.80 @giselles-ai/protocol:build: > @giselles-ai/protocol@0.0.0 build /app/packages/protocol
+#14 76.80 @giselles-ai/protocol:build: > tsup
+#14 76.80 @giselles-ai/protocol:build: 
+#14 79.40 @giselles-ai/protocol:build: CLI Building entry: src/index.ts
+#14 79.40 @giselles-ai/protocol:build: CLI Using tsconfig: tsconfig.json
+#14 79.40 @giselles-ai/protocol:build: CLI tsup v8.3.5
+#14 79.40 @giselles-ai/protocol:build: CLI Using tsup config: /app/packages/protocol/tsup.config.ts
+#14 79.45 @giselles-ai/protocol:build: CLI Target: esnext
+#14 79.47 @giselles-ai/protocol:build: CJS Build start
+#14 79.47 @giselles-ai/protocol:build: ESM Build start
+#14 79.94 @giselles-ai/protocol:build: CJS dist/index.js     55.44 KB
+#14 79.94 @giselles-ai/protocol:build: CJS dist/index.js.map 102.15 KB
+#14 79.94 @giselles-ai/protocol:build: CJS ÔÜí´©Å Build success in 470ms
+#14 79.95 @giselles-ai/protocol:build: ESM dist/index.mjs     44.32 KB
+#14 79.95 @giselles-ai/protocol:build: ESM dist/index.mjs.map 100.88 KB
+#14 79.95 @giselles-ai/protocol:build: ESM ÔÜí´©Å Build success in 477ms
+#14 81.56 @giselles-ai/protocol:build: DTS Build start
+#14 111.9 @giselles-ai/protocol:build: DTS ÔÜí´©Å Build success in 30383ms
+#14 111.9 @giselles-ai/protocol:build: DTS dist/index.d.ts  315.28 KB
+#14 111.9 @giselles-ai/protocol:build: DTS dist/index.d.mts 315.28 KB
+#14 112.7 @giselles-ai/workspace-utils:build: cache miss, executing da68b349bc9c9592
+#14 112.7 @giselles-ai/rag:build: cache miss, executing 2beba5bb587a7aaa
+#14 112.8 @giselles-ai/stream:build: cache miss, executing 599c86b4edddc22c
+#14 112.8 @giselles-ai/text-editor-utils:build: cache miss, executing 75b60523308fd1c3
+#14 118.2 @giselles-ai/workspace-utils:build: 
+#14 118.2 @giselles-ai/workspace-utils:build: > @giselles-ai/workspace-utils@0.0.0 build /app/packages/workspace-utils
+#14 118.2 @giselles-ai/workspace-utils:build: > tsup
+#14 118.2 @giselles-ai/workspace-utils:build: 
+#14 118.4 @giselles-ai/rag:build: 
+#14 118.4 @giselles-ai/rag:build: > @giselles-ai/rag@0.1.0 build /app/packages/rag
+#14 118.4 @giselles-ai/rag:build: > tsup
+#14 118.4 @giselles-ai/rag:build: 
+#14 118.5 @giselles-ai/stream:build: 
+#14 118.5 @giselles-ai/stream:build: > @giselles-ai/stream@0.0.0 build /app/packages/stream
+#14 118.5 @giselles-ai/stream:build: > tsup
+#14 118.5 @giselles-ai/stream:build: 
+#14 118.5 @giselles-ai/text-editor-utils:build: 
+#14 118.5 @giselles-ai/text-editor-utils:build: > @giselles-ai/text-editor-utils@0.0.0 build /app/packages/text-editor-utils
+#14 118.5 @giselles-ai/text-editor-utils:build: > tsup
+#14 118.5 @giselles-ai/text-editor-utils:build: 
+#14 120.4 @giselles-ai/workspace-utils:build: CLI Building entry: src/index.ts
+#14 120.4 @giselles-ai/workspace-utils:build: CLI Using tsconfig: tsconfig.json
+#14 120.5 @giselles-ai/workspace-utils:build: CLI tsup v8.3.5
+#14 120.5 @giselles-ai/workspace-utils:build: CLI Using tsup config: /app/packages/workspace-utils/tsup.config.ts
+#14 120.6 @giselles-ai/workspace-utils:build: CLI Target: esnext
+#14 120.6 @giselles-ai/workspace-utils:build: CJS Build start
+#14 120.6 @giselles-ai/workspace-utils:build: ESM Build start
+#14 120.7 @giselles-ai/rag:build: CLI Building entry: src/index.ts
+#14 120.7 @giselles-ai/rag:build: CLI Using tsconfig: tsconfig.json
+#14 120.7 @giselles-ai/rag:build: CLI tsup v8.3.5
+#14 120.7 @giselles-ai/rag:build: CLI Using tsup config: /app/packages/rag/tsup.config.ts
+#14 120.7 @giselles-ai/rag:build: CLI Target: node18
+#14 120.7 @giselles-ai/text-editor-utils:build: CLI Building entry: src/index.ts
+#14 120.8 @giselles-ai/text-editor-utils:build: CLI Using tsconfig: tsconfig.json
+#14 120.8 @giselles-ai/workspace-utils:build: ESM dist/index.mjs     6.83 KB
+#14 120.8 @giselles-ai/workspace-utils:build: ESM dist/index.mjs.map 14.35 KB
+#14 120.8 @giselles-ai/workspace-utils:build: ESM ÔÜí´©Å Build success in 171ms
+#14 120.8 @giselles-ai/text-editor-utils:build: CLI tsup v8.3.5
+#14 120.8 @giselles-ai/text-editor-utils:build: CLI Using tsup config: /app/packages/text-editor-utils/tsup.config.ts
+#14 120.8 @giselles-ai/rag:build: CLI Cleaning output folder
+#14 120.8 @giselles-ai/workspace-utils:build: CJS dist/index.js     7.96 KB
+#14 120.8 @giselles-ai/workspace-utils:build: CJS dist/index.js.map 14.48 KB
+#14 120.8 @giselles-ai/workspace-utils:build: CJS ÔÜí´©Å Build success in 198ms
+#14 120.8 @giselles-ai/rag:build: CJS Build start
+#14 120.8 @giselles-ai/rag:build: ESM Build start
+#14 120.9 @giselles-ai/text-editor-utils:build: CLI Target: es2018
+#14 120.9 @giselles-ai/text-editor-utils:build: CJS Build start
+#14 120.9 @giselles-ai/text-editor-utils:build: ESM Build start
+#14 121.0 @giselles-ai/stream:build: CLI Building entry: src/index.ts
+#14 121.0 @giselles-ai/stream:build: CLI Using tsconfig: tsconfig.json
+#14 121.0 @giselles-ai/stream:build: CLI tsup v8.3.5
+#14 121.0 @giselles-ai/stream:build: CLI Using tsup config: /app/packages/stream/tsup.config.ts
+#14 121.1 @giselles-ai/stream:build: CLI Target: esnext
+#14 121.1 @giselles-ai/stream:build: CJS Build start
+#14 121.2 @giselles-ai/stream:build: ESM Build start
+#14 121.3 @giselles-ai/text-editor-utils:build: ESM dist/index.mjs     8.39 KB
+#14 121.3 @giselles-ai/text-editor-utils:build: ESM dist/index.mjs.map 18.73 KB
+#14 121.3 @giselles-ai/text-editor-utils:build: ESM ÔÜí´©Å Build success in 417ms
+#14 121.3 @giselles-ai/text-editor-utils:build: CJS dist/index.js     10.88 KB
+#14 121.3 @giselles-ai/text-editor-utils:build: CJS dist/index.js.map 19.14 KB
+#14 121.3 @giselles-ai/text-editor-utils:build: CJS ÔÜí´©Å Build success in 431ms
+#14 121.4 @giselles-ai/stream:build: CJS dist/index.js     2.42 KB
+#14 121.4 @giselles-ai/stream:build: CJS dist/index.js.map 1.48 KB
+#14 121.4 @giselles-ai/stream:build: CJS ÔÜí´©Å Build success in 234ms
+#14 121.4 @giselles-ai/stream:build: ESM dist/index.mjs     602.00 B
+#14 121.4 @giselles-ai/stream:build: ESM dist/index.mjs.map 1.30 KB
+#14 121.4 @giselles-ai/stream:build: ESM ÔÜí´©Å Build success in 239ms
+#14 121.4 @giselles-ai/rag:build: CJS dist/index.js     56.90 KB
+#14 121.4 @giselles-ai/rag:build: CJS dist/index.js.map 119.44 KB
+#14 121.4 @giselles-ai/rag:build: CJS ÔÜí´©Å Build success in 572ms
+#14 121.4 @giselles-ai/rag:build: ESM dist/index.mjs     53.67 KB
+#14 121.4 @giselles-ai/rag:build: ESM dist/index.mjs.map 119.13 KB
+#14 121.4 @giselles-ai/rag:build: ESM ÔÜí´©Å Build success in 577ms
+#14 122.6 @giselles-ai/workspace-utils:build: DTS Build start
+#14 122.7 @giselles-ai/text-editor-utils:build: DTS Build start
+#14 122.9 @giselles-ai/rag:build: DTS Build start
+#14 123.3 @giselles-ai/stream:build: DTS Build start
+#14 141.9 @giselles-ai/workspace-utils:build: DTS ÔÜí´©Å Build success in 19343ms
+#14 142.0 @giselles-ai/workspace-utils:build: DTS dist/index.d.ts  3.97 KB
+#14 142.0 @giselles-ai/workspace-utils:build: DTS dist/index.d.mts 3.97 KB
+#14 142.5 @giselles-ai/stream:build: DTS ÔÜí´©Å Build success in 19298ms
+#14 142.5 @giselles-ai/stream:build: DTS dist/index.d.ts  8.50 KB
+#14 142.5 @giselles-ai/stream:build: DTS dist/index.d.mts 8.50 KB
+#14 144.7 @giselles-ai/text-editor-utils:build: DTS ÔÜí´©Å Build success in 21930ms
+#14 144.7 @giselles-ai/text-editor-utils:build: DTS dist/index.d.ts  3.59 KB
+#14 144.7 @giselles-ai/text-editor-utils:build: DTS dist/index.d.mts 3.59 KB
+#14 145.2 @giselles-ai/rag:build: DTS ÔÜí´©Å Build success in 22301ms
+#14 145.2 @giselles-ai/rag:build: DTS dist/index.d.ts  18.00 KB
+#14 145.2 @giselles-ai/rag:build: DTS dist/index.d.mts 18.00 KB
+#14 145.4 @giselles-ai/node-registry:build: cache miss, executing 8c2beb9737306fcd
+#14 145.7 @giselles-ai/langfuse:build: cache miss, executing 475f3cf1aa517105
+#14 145.8 @giselles-ai/github-tool:build: cache miss, executing d182a01a0347999a
+#14 150.9 @giselles-ai/langfuse:build: 
+#14 150.9 @giselles-ai/langfuse:build: > @giselles-ai/langfuse@0.0.0 build /app/packages/langfuse
+#14 150.9 @giselles-ai/langfuse:build: > tsup
+#14 150.9 @giselles-ai/langfuse:build: 
+#14 150.9 @giselles-ai/node-registry:build: 
+#14 150.9 @giselles-ai/node-registry:build: > @giselles-ai/node-registry@0.0.0 build /app/packages/node-registry
+#14 150.9 @giselles-ai/node-registry:build: > tsup
+#14 150.9 @giselles-ai/node-registry:build: 
+#14 151.1 @giselles-ai/github-tool:build: 
+#14 151.1 @giselles-ai/github-tool:build: > @giselles-ai/github-tool@0.0.0 build /app/packages/github-tool
+#14 151.1 @giselles-ai/github-tool:build: > tsup
+#14 151.1 @giselles-ai/github-tool:build: 
+#14 153.1 @giselles-ai/langfuse:build: CLI Building entry: src/index.ts
+#14 153.1 @giselles-ai/langfuse:build: CLI Using tsconfig: tsconfig.json
+#14 153.1 @giselles-ai/langfuse:build: CLI tsup v8.3.5
+#14 153.1 @giselles-ai/langfuse:build: CLI Using tsup config: /app/packages/langfuse/tsup.config.ts
+#14 153.1 @giselles-ai/langfuse:build: CLI Target: esnext
+#14 153.1 @giselles-ai/langfuse:build: CJS Build start
+#14 153.1 @giselles-ai/langfuse:build: ESM Build start
+#14 153.1 @giselles-ai/node-registry:build: CLI Building entry: src/index.ts
+#14 153.1 @giselles-ai/node-registry:build: CLI Using tsconfig: tsconfig.json
+#14 153.1 @giselles-ai/node-registry:build: CLI tsup v8.3.5
+#14 153.1 @giselles-ai/node-registry:build: CLI Using tsup config: /app/packages/node-registry/tsup.config.ts
+#14 153.3 @giselles-ai/node-registry:build: CLI Target: esnext
+#14 153.3 @giselles-ai/node-registry:build: CJS Build start
+#14 153.3 @giselles-ai/node-registry:build: ESM Build start
+#14 153.4 @giselles-ai/langfuse:build: CJS dist/index.js     16.93 KB
+#14 153.4 @giselles-ai/langfuse:build: CJS dist/index.js.map 30.12 KB
+#14 153.4 @giselles-ai/langfuse:build: CJS ÔÜí´©Å Build success in 251ms
+#14 153.4 @giselles-ai/langfuse:build: ESM dist/index.mjs     15.45 KB
+#14 153.4 @giselles-ai/langfuse:build: ESM dist/index.mjs.map 30.03 KB
+#14 153.4 @giselles-ai/langfuse:build: ESM ÔÜí´©Å Build success in 258ms
+#14 153.4 @giselles-ai/github-tool:build: CLI Building entry: src/index.ts
+#14 153.4 @giselles-ai/github-tool:build: CLI Using tsconfig: tsconfig.json
+#14 153.4 @giselles-ai/github-tool:build: CLI tsup v8.3.5
+#14 153.4 @giselles-ai/github-tool:build: CLI Using tsup config: /app/packages/github-tool/tsup.config.ts
+#14 153.5 @giselles-ai/github-tool:build: CLI Target: esnext
+#14 153.5 @giselles-ai/github-tool:build: CJS Build start
+#14 153.5 @giselles-ai/github-tool:build: ESM Build start
+#14 153.6 @giselles-ai/node-registry:build: CJS dist/index.js     40.59 KB
+#14 153.6 @giselles-ai/node-registry:build: CJS dist/index.js.map 75.30 KB
+#14 153.6 @giselles-ai/node-registry:build: CJS ÔÜí´©Å Build success in 358ms
+#14 153.6 @giselles-ai/node-registry:build: ESM dist/index.mjs     37.21 KB
+#14 153.6 @giselles-ai/node-registry:build: ESM dist/index.mjs.map 75.60 KB
+#14 153.6 @giselles-ai/node-registry:build: ESM ÔÜí´©Å Build success in 371ms
+#14 154.0 @giselles-ai/github-tool:build: ESM dist/index.mjs     88.91 KB
+#14 154.0 @giselles-ai/github-tool:build: ESM dist/index.mjs.map 174.47 KB
+#14 154.0 @giselles-ai/github-tool:build: ESM ÔÜí´©Å Build success in 477ms
+#14 154.0 @giselles-ai/github-tool:build: CJS dist/index.js     94.80 KB
+#14 154.0 @giselles-ai/github-tool:build: CJS dist/index.js.map 174.45 KB
+#14 154.0 @giselles-ai/github-tool:build: CJS ÔÜí´©Å Build success in 486ms
+#14 155.0 @giselles-ai/langfuse:build: DTS Build start
+#14 155.2 @giselles-ai/node-registry:build: DTS Build start
+#14 155.5 @giselles-ai/github-tool:build: DTS Build start
+#14 174.4 @giselles-ai/langfuse:build: DTS ÔÜí´©Å Build success in 19335ms
+#14 174.4 @giselles-ai/langfuse:build: DTS dist/index.d.ts  723.00 B
+#14 174.4 @giselles-ai/langfuse:build: DTS dist/index.d.mts 723.00 B
+#14 177.3 @giselles-ai/node-registry:build: DTS ÔÜí´©Å Build success in 22117ms
+#14 177.3 @giselles-ai/node-registry:build: DTS dist/index.d.ts  39.69 KB
+#14 177.3 @giselles-ai/node-registry:build: DTS dist/index.d.mts 39.69 KB
+#14 200.8 @giselles-ai/github-tool:build: DTS ÔÜí´©Å Build success in 45320ms
+#14 200.8 @giselles-ai/github-tool:build: DTS dist/index.d.ts  87.01 KB
+#14 200.8 @giselles-ai/github-tool:build: DTS dist/index.d.mts 87.01 KB
+#14 201.9 @giselles-ai/giselle:build: cache miss, executing d884afad69c591eb
+#14 207.6 @giselles-ai/giselle:build: 
+#14 207.6 @giselles-ai/giselle:build: > @giselles-ai/giselle@0.0.0 build /app/packages/giselle
+#14 207.6 @giselles-ai/giselle:build: > tsup
+#14 207.6 @giselles-ai/giselle:build: 
+#14 209.4 @giselles-ai/giselle:build: CLI Building entry: src/index.ts
+#14 209.4 @giselles-ai/giselle:build: CLI Using tsconfig: tsconfig.json
+#14 209.4 @giselles-ai/giselle:build: CLI tsup v8.3.5
+#14 209.4 @giselles-ai/giselle:build: CLI Using tsup config: /app/packages/giselle/tsup.config.ts
+#14 209.5 @giselles-ai/giselle:build: CLI Target: esnext
+#14 209.5 @giselles-ai/giselle:build: CJS Build start
+#14 209.5 @giselles-ai/giselle:build: ESM Build start
+#14 210.3 @giselles-ai/giselle:build: ESM dist/index.mjs     318.80 KB
+#14 210.3 @giselles-ai/giselle:build: ESM dist/index.mjs.map 688.30 KB
+#14 210.3 @giselles-ai/giselle:build: ESM ÔÜí´©Å Build success in 803ms
+#14 210.3 @giselles-ai/giselle:build: CJS dist/index.js     324.38 KB
+#14 210.3 @giselles-ai/giselle:build: CJS dist/index.js.map 687.85 KB
+#14 210.3 @giselles-ai/giselle:build: CJS ÔÜí´©Å Build success in 806ms
+#14 211.1 @giselles-ai/giselle:build: DTS Build start
+#14 268.8 @giselles-ai/giselle:build: DTS ÔÜí´©Å Build success in 57701ms
+#14 268.8 @giselles-ai/giselle:build: DTS dist/index.d.ts  252.34 KB
+#14 268.8 @giselles-ai/giselle:build: DTS dist/index.d.mts 252.34 KB
+#14 269.7 @giselles-ai/http:build: cache miss, executing d04380af5a8ca649
+#14 274.6 @giselles-ai/http:build: 
+#14 274.6 @giselles-ai/http:build: > @giselles-ai/http@0.0.0 build /app/packages/http
+#14 274.6 @giselles-ai/http:build: > tsup
+#14 274.6 @giselles-ai/http:build: 
+#14 276.5 @giselles-ai/http:build: CLI Building entry: src/index.ts
+#14 276.6 @giselles-ai/http:build: CLI Using tsconfig: tsconfig.json
+#14 276.6 @giselles-ai/http:build: CLI tsup v8.3.5
+#14 276.6 @giselles-ai/http:build: CLI Using tsup config: /app/packages/http/tsup.config.ts
+#14 276.6 @giselles-ai/http:build: CLI Target: esnext
+#14 276.6 @giselles-ai/http:build: CJS Build start
+#14 276.6 @giselles-ai/http:build: ESM Build start
+#14 277.1 @giselles-ai/http:build: CJS dist/index.js     117.55 KB
+#14 277.1 @giselles-ai/http:build: CJS dist/index.js.map 291.64 KB
+#14 277.1 @giselles-ai/http:build: CJS ÔÜí´©Å Build success in 457ms
+#14 277.1 @giselles-ai/http:build: ESM dist/index.mjs     114.21 KB
+#14 277.1 @giselles-ai/http:build: ESM dist/index.mjs.map 291.14 KB
+#14 277.1 @giselles-ai/http:build: ESM ÔÜí´©Å Build success in 457ms
+#14 278.1 @giselles-ai/http:build: DTS Build start
+#14 302.5 @giselles-ai/http:build: DTS ÔÜí´©Å Build success in 24372ms
+#14 302.5 @giselles-ai/http:build: DTS dist/index.d.ts  294.63 KB
+#14 302.5 @giselles-ai/http:build: DTS dist/index.d.mts 294.63 KB
+#14 303.1 @giselles-ai/nextjs:build: cache miss, executing b085ee1a0a89bbab
+#14 303.1 @giselles-ai/react:build: cache miss, executing 5f6097b8fe26a557
+#14 308.1 @giselles-ai/nextjs:build: 
+#14 308.1 @giselles-ai/nextjs:build: > @giselles-ai/nextjs@0.0.0 build /app/packages/nextjs
+#14 308.1 @giselles-ai/nextjs:build: > tsup
+#14 308.1 @giselles-ai/nextjs:build: 
+#14 308.2 @giselles-ai/react:build: 
+#14 308.2 @giselles-ai/react:build: > @giselles-ai/react@0.0.0 build /app/packages/react
+#14 308.2 @giselles-ai/react:build: > tsup
+#14 308.2 @giselles-ai/react:build: 
+#14 310.0 @giselles-ai/nextjs:build: CLI Building entry: src/index.ts
+#14 310.0 @giselles-ai/nextjs:build: CLI Using tsconfig: tsconfig.json
+#14 310.1 @giselles-ai/nextjs:build: CLI tsup v8.3.5
+#14 310.1 @giselles-ai/nextjs:build: CLI Using tsup config: /app/packages/nextjs/tsup.config.ts
+#14 310.1 @giselles-ai/nextjs:build: CLI Target: esnext
+#14 310.1 @giselles-ai/nextjs:build: CJS Build start
+#14 310.1 @giselles-ai/nextjs:build: ESM Build start
+#14 310.2 @giselles-ai/react:build: CLI Building entry: src/index.ts
+#14 310.3 @giselles-ai/react:build: CLI Using tsconfig: tsconfig.json
+#14 310.3 @giselles-ai/react:build: CLI tsup v8.3.5
+#14 310.3 @giselles-ai/react:build: CLI Using tsup config: /app/packages/react/tsup.config.ts
+#14 310.3 @giselles-ai/nextjs:build: ESM dist/index.mjs     5.39 KB
+#14 310.3 @giselles-ai/nextjs:build: ESM dist/index.mjs.map 10.82 KB
+#14 310.3 @giselles-ai/nextjs:build: ESM ÔÜí´©Å Build success in 185ms
+#14 310.3 @giselles-ai/nextjs:build: CJS dist/index.js     6.67 KB
+#14 310.3 @giselles-ai/nextjs:build: CJS dist/index.js.map 10.91 KB
+#14 310.3 @giselles-ai/nextjs:build: CJS ÔÜí´©Å Build success in 191ms
+#14 310.3 @giselles-ai/react:build: CLI Target: esnext
+#14 310.3 @giselles-ai/react:build: CJS Build start
+#14 310.3 @giselles-ai/react:build: ESM Build start
+#14 310.9 @giselles-ai/react:build: CJS dist/index.js     135.88 KB
+#14 310.9 @giselles-ai/react:build: CJS dist/index.js.map 303.91 KB
+#14 310.9 @giselles-ai/react:build: CJS ÔÜí´©Å Build success in 544ms
+#14 310.9 @giselles-ai/react:build: ESM dist/index.mjs     130.14 KB
+#14 310.9 @giselles-ai/react:build: ESM dist/index.mjs.map 303.62 KB
+#14 310.9 @giselles-ai/react:build: ESM ÔÜí´©Å Build success in 546ms
+#14 311.8 @giselles-ai/nextjs:build: DTS Build start
+#14 312.1 @giselles-ai/react:build: DTS Build start
+#14 337.4 @giselles-ai/nextjs:build: DTS ÔÜí´©Å Build success in 25618ms
+#14 337.4 @giselles-ai/nextjs:build: DTS dist/index.d.ts  118.80 KB
+#14 337.4 @giselles-ai/nextjs:build: DTS dist/index.d.mts 118.80 KB
+#14 343.4 @giselles-ai/react:build: DTS ÔÜí´©Å Build success in 31291ms
+#14 343.4 @giselles-ai/react:build: DTS dist/index.d.ts  45.00 KB
+#14 343.4 @giselles-ai/react:build: DTS dist/index.d.mts 45.00 KB
+#14 344.2 @giselles-ai/text-editor:build: cache miss, executing 7445ad79ae70bd18
+#14 349.0 @giselles-ai/text-editor:build: 
+#14 349.0 @giselles-ai/text-editor:build: > @giselles-ai/text-editor@0.0.0 build /app/packages/text-editor
+#14 349.0 @giselles-ai/text-editor:build: > tsup
+#14 349.0 @giselles-ai/text-editor:build: 
+#14 350.7 @giselles-ai/text-editor:build: CLI Building entry: src/react/index.ts
+#14 350.7 @giselles-ai/text-editor:build: CLI Using tsconfig: tsconfig.json
+#14 350.7 @giselles-ai/text-editor:build: CLI tsup v8.3.5
+#14 350.7 @giselles-ai/text-editor:build: CLI Using tsup config: /app/packages/text-editor/tsup.config.ts
+#14 350.8 @giselles-ai/text-editor:build: CLI Target: es2018
+#14 350.8 @giselles-ai/text-editor:build: CLI Cleaning output folder
+#14 350.8 @giselles-ai/text-editor:build: CJS Build start
+#14 350.8 @giselles-ai/text-editor:build: ESM Build start
+#14 351.1 @giselles-ai/text-editor:build: ESM react/dist/index.mjs     17.32 KB
+#14 351.1 @giselles-ai/text-editor:build: ESM react/dist/index.mjs.map 29.46 KB
+#14 351.1 @giselles-ai/text-editor:build: ESM ÔÜí´©Å Build success in 260ms
+#14 351.1 @giselles-ai/text-editor:build: CJS react/dist/index.js     20.19 KB
+#14 351.1 @giselles-ai/text-editor:build: CJS react/dist/index.js.map 29.53 KB
+#14 351.1 @giselles-ai/text-editor:build: CJS ÔÜí´©Å Build success in 262ms
+#14 352.5 @giselles-ai/text-editor:build: DTS Build start
+#14 375.6 @giselles-ai/text-editor:build: DTS ÔÜí´©Å Build success in 23136ms
+#14 375.6 @giselles-ai/text-editor:build: DTS react/dist/index.d.ts  884.00 B
+#14 375.6 @giselles-ai/text-editor:build: DTS react/dist/index.d.mts 884.00 B
+#14 376.4 studio.giselles.ai:build: cache miss, executing b8f7d2fe9299cf5a
+#14 381.2 studio.giselles.ai:build: 
+#14 381.2 studio.giselles.ai:build: > studio.giselles.ai@0.1.0 build /app/apps/studio.giselles.ai
+#14 381.2 studio.giselles.ai:build: > next build
+#14 381.2 studio.giselles.ai:build: 
+#14 386.2 studio.giselles.ai:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#14 386.2 studio.giselles.ai:build: This information is used to shape Next.js' roadmap and prioritize features.
+#14 386.2 studio.giselles.ai:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#14 386.2 studio.giselles.ai:build: https://nextjs.org/telemetry
+#14 386.2 studio.giselles.ai:build: 
+#14 386.3 studio.giselles.ai:build:    Ôû▓ Next.js 16.0.10 (Turbopack)
+#14 386.3 studio.giselles.ai:build:    - Experiments (use with caution):
+#14 386.3 studio.giselles.ai:build:      Ô£ô typedEnv
+#14 386.3 studio.giselles.ai:build:      Ô£ô webpackBuildWorker
+#14 386.3 studio.giselles.ai:build:      Ô£ô webpackMemoryOptimizations
+#14 386.3 studio.giselles.ai:build: 
+#14 387.0 studio.giselles.ai:build:    Creating an optimized production build ...
+#14 1308.7 studio.giselles.ai:build: Turbopack build encountered 9 warnings:
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/@opentelemetry+instrumentation@0.208.0_@opentelemetry+api@1.9.0/node_modules/@opentelemetry/instrumentation/build/esm/platform/node
+#14 1308.7 studio.giselles.ai:build: Package import-in-the-middle can't be external
+#14 1308.7 studio.giselles.ai:build: The request import-in-the-middle matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The package resolves to a different version when requested from the project directory (1.13.1) compared to the package requested from the importing module (2.0.0).
+#14 1308.7 studio.giselles.ai:build: Make sure to install the same version of the package in both locations.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/@sentry+node-core@10.28.0_@opentelemetry+api@1.9.0_@opentelemetry+context-async-hooks@2_9fd8ee99b3a67777a945553fbad5b4c0/node_modules/@sentry/node-core/build/cjs/sdk
+#14 1308.7 studio.giselles.ai:build: Package import-in-the-middle can't be external
+#14 1308.7 studio.giselles.ai:build: The request import-in-the-middle matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The package resolves to a different version when requested from the project directory (1.13.1) compared to the package requested from the importing module (2.0.0).
+#14 1308.7 studio.giselles.ai:build: Make sure to install the same version of the package in both locations.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/@react-email+render@2.0.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/@react-email/render/dist/node
+#14 1308.7 studio.giselles.ai:build: Package prettier can't be external
+#14 1308.7 studio.giselles.ai:build: The request prettier/plugins/html matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The request could not be resolved by Node.js from the project directory.
+#14 1308.7 studio.giselles.ai:build: Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+#14 1308.7 studio.giselles.ai:build: Try to install it into the project directory by running npm install prettier from the project directory.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/@react-email+render@2.0.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/@react-email/render/dist/node
+#14 1308.7 studio.giselles.ai:build: Package prettier can't be external
+#14 1308.7 studio.giselles.ai:build: The request prettier/standalone matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The request could not be resolved by Node.js from the project directory.
+#14 1308.7 studio.giselles.ai:build: Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+#14 1308.7 studio.giselles.ai:build: Try to install it into the project directory by running npm install prettier from the project directory.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/@opentelemetry+instrumentation@0.208.0_@opentelemetry+api@1.9.0/node_modules/@opentelemetry/instrumentation/build/esm/platform/node
+#14 1308.7 studio.giselles.ai:build: Package require-in-the-middle can't be external
+#14 1308.7 studio.giselles.ai:build: The request require-in-the-middle matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The package resolves to a different version when requested from the project directory (7.5.2) compared to the package requested from the importing module (8.0.1).
+#14 1308.7 studio.giselles.ai:build: Make sure to install the same version of the package in both locations.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/shiki@3.20.0/node_modules/shiki/dist
+#14 1308.7 studio.giselles.ai:build: Package shiki can't be external
+#14 1308.7 studio.giselles.ai:build: The request shiki/wasm matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The request could not be resolved by Node.js from the project directory.
+#14 1308.7 studio.giselles.ai:build: Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+#14 1308.7 studio.giselles.ai:build: Try to install it into the project directory by running npm install shiki from the project directory.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/streamdown@1.6.10_@types+mdast@4.0.4_micromark-util-types@2.0.1_micromark@4.0.1_react@19.2.1/node_modules/streamdown/dist
+#14 1308.7 studio.giselles.ai:build: Package shiki can't be external
+#14 1308.7 studio.giselles.ai:build: The request shiki matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The request could not be resolved by Node.js from the project directory.
+#14 1308.7 studio.giselles.ai:build: Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+#14 1308.7 studio.giselles.ai:build: Try to install it into the project directory by running npm install shiki from the project directory.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: ./node_modules/.pnpm/streamdown@1.6.10_@types+mdast@4.0.4_micromark-util-types@2.0.1_micromark@4.0.1_react@19.2.1/node_modules/streamdown/dist
+#14 1308.7 studio.giselles.ai:build: Package shiki can't be external
+#14 1308.7 studio.giselles.ai:build: The request shiki/engine/javascript matches serverExternalPackages (or the default list).
+#14 1308.7 studio.giselles.ai:build: The request could not be resolved by Node.js from the project directory.
+#14 1308.7 studio.giselles.ai:build: Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+#14 1308.7 studio.giselles.ai:build: Try to install it into the project directory by running npm install shiki from the project directory.
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: [externals]/node:crypto
+#14 1308.7 studio.giselles.ai:build: unexpected export *
+#14 1308.7 studio.giselles.ai:build: export * used with module [externals]/node:crypto [external] (node:crypto, cjs) which is a CommonJS module with exports only available at runtime
+#14 1308.7 studio.giselles.ai:build: List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: Import traces:
+#14 1308.7 studio.giselles.ai:build:   #1 [external]:
+#14 1308.7 studio.giselles.ai:build:     [externals]/node:crypto [external]
+#14 1308.7 studio.giselles.ai:build:     ./apps/studio.giselles.ai/app/api/vector-stores/cron/document/ingest/route.ts [App Route]
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build:   #2 [external]:
+#14 1308.7 studio.giselles.ai:build:     [externals]/node:crypto [external]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/jose@5.9.6/node_modules/jose/dist/node/esm/lib/cek.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/jose@5.9.6/node_modules/jose/dist/node/esm/jwe/flattened/decrypt.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/jose@5.9.6/node_modules/jose/dist/node/esm/jwe/compact/decrypt.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/jose@5.9.6/node_modules/jose/dist/node/esm/jwt/decrypt.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/flags@4.0.0_@opentelemetry+api@1.9.0_next@16.0.10_@babel+core@7.26.7_@opentelemetry+api_f5c7237fd07b0544855a252b9a20fe49/node_modules/flags/dist/chunk-4EH7RLTD.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./node_modules/.pnpm/flags@4.0.0_@opentelemetry+api@1.9.0_next@16.0.10_@babel+core@7.26.7_@opentelemetry+api_f5c7237fd07b0544855a252b9a20fe49/node_modules/flags/dist/next.js [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./apps/studio.giselles.ai/flags.ts [App Route]
+#14 1308.7 studio.giselles.ai:build:     ./apps/studio.giselles.ai/app/api/stage/acts/route.ts [App Route]
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.7 studio.giselles.ai:build: 
+#14 1308.8 studio.giselles.ai:build:  Ô£ô Compiled successfully in 15.3min
+#14 1308.9 studio.giselles.ai:build:    Running TypeScript ...
+#14 1466.5 studio.giselles.ai:build:    Collecting page data using 11 workers ...
+#14 1470.7 studio.giselles.ai:build:  ÔÜá Using edge runtime on a page currently disables static generation for that page
+#14 1475.2 studio.giselles.ai:build: Error: POSTGRES_URL environment variable is required
+#14 1475.2 studio.giselles.ai:build:     at t (.next/server/chunks/_8045d0fd._.js:311:2370)
+#14 1475.2 studio.giselles.ai:build:     at module evaluation (.next/server/chunks/_8045d0fd._.js:311:16621)
+#14 1475.2 studio.giselles.ai:build:     at instantiateModule (.next/server/chunks/[turbopack]_runtime.js:715:9)
+#14 1475.2 studio.giselles.ai:build:     at getOrInstantiateModuleFromParent (.next/server/chunks/[turbopack]_runtime.js:738:12)
+#14 1475.2 studio.giselles.ai:build:     at Context.esmImport [as i] (.next/server/chunks/[turbopack]_runtime.js:228:20)
+#14 1475.2 studio.giselles.ai:build:     at module evaluation (.next/server/chunks/[root-of-the-server]__c4fe3983._.js:1:16833)
+#14 1475.2 studio.giselles.ai:build:     at instantiateModule (.next/server/chunks/[turbopack]_runtime.js:715:9)
+#14 1475.2 studio.giselles.ai:build:     at instantiateRuntimeModule (.next/server/chunks/[turbopack]_runtime.js:743:12)
+#14 1475.2 studio.giselles.ai:build:     at getOrInstantiateRuntimeModule (.next/server/chunks/[turbopack]_runtime.js:756:12)
+#14 1475.2 studio.giselles.ai:build:     at Object.m (.next/server/chunks/[turbopack]_runtime.js:765:18)
+#14 1475.6 studio.giselles.ai:build: 
+#14 1475.6 studio.giselles.ai:build: > Build error occurred
+#14 1475.6 studio.giselles.ai:build: Error: Failed to collect page data for /api/vector-stores/cron/github/ingest
+#14 1475.6 studio.giselles.ai:build:     at ignore-listed frames {
+#14 1475.6 studio.giselles.ai:build:   type: 'Error'
+#14 1475.6 studio.giselles.ai:build: }
+#14 1476.4 studio.giselles.ai:build: ÔÇëELIFECYCLEÔÇë Command failed with exit code 1.
+#14 1476.6 studio.giselles.ai:build: ERROR: command finished with error: command (/app/apps/studio.giselles.ai) /usr/local/bin/pnpm run build exited (1)
+#14 1476.6 studio.giselles.ai#build: command (/app/apps/studio.giselles.ai) /usr/local/bin/pnpm run build exited (1)
+#14 1476.7 
+#14 1476.7  Tasks:    25 successful, 26 total
+#14 1476.7 Cached:    0 cached, 26 total
+#14 1476.7   Time:    24m20.893s 
+#14 1476.7 Failed:    studio.giselles.ai#build
+#14 1476.7 
+#14 1476.7  ERROR  run failed: command  exited (1)
+#14 ERROR: process "/bin/sh -c turbo build --filter=studio.giselles.ai" did not complete successfully: exit code: 1
+------
+ > [builder 6/6] RUN turbo build --filter=studio.giselles.ai:
+1476.4 studio.giselles.ai:build: ÔÇëELIFECYCLEÔÇë Command failed with exit code 1.
+1476.6 studio.giselles.ai:build: ERROR: command finished with error: command (/app/apps/studio.giselles.ai) /usr/local/bin/pnpm run build exited (1)
+1476.6 studio.giselles.ai#build: command (/app/apps/studio.giselles.ai) /usr/local/bin/pnpm run build exited (1)
+1476.7 
+1476.7  Tasks:    25 successful, 26 total
+1476.7 Cached:    0 cached, 26 total
+1476.7   Time:    24m20.893s 
+1476.7 Failed:    studio.giselles.ai#build
+1476.7 
+1476.7  ERROR  run failed: command  exited (1)
+------
+Dockerfile:10
+
+--------------------
+
+   8 |     COPY . .
+
+   9 |     RUN pnpm install
+
+  10 | >>> RUN turbo build --filter=studio.giselles.ai
+
+  11 |     
+
+  12 |     FROM base AS runner
+
+--------------------
+
+failed to solve: process "/bin/sh -c turbo build --filter=studio.giselles.ai" did not complete successfully: exit code: 1
+

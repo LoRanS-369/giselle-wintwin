@@ -1,44 +1,38 @@
-import { anthropic } from "./anthropic";
-import { google } from "./google";
-import { openai } from "./openai";
+import { anthropic } from "./anthropic"
+import { google } from "./google"
+import { openai } from "./openai"
+import { openrouter } from "./openrouter"
 
 export const languageModels = [
-	...Object.values(openai),
-	...Object.values(anthropic),
-	...Object.values(google),
-];
+  ...Object.values(openai),
+  ...Object.values(anthropic),
+  ...Object.values(anthropic),
+  ...Object.values(google),
+  ...Object.values(openrouter),
+]
 
-export const languageModelIds = languageModels.map((model) => model.id);
-export type LanguageModelId = (typeof languageModelIds)[number];
+export const languageModelIds = languageModels.map(model => model.id)
+export type LanguageModelId = (typeof languageModelIds)[number]
 export function isLanguageModelId(id: unknown): id is LanguageModelId {
-	return languageModelIds.includes(id as LanguageModelId);
+  return languageModelIds.includes(id as LanguageModelId)
 }
 
-export const languageModelProviderDefinitions = languageModels.map(
-	(model) => model.provider,
-);
-export const languageModelProviders = languageModelProviderDefinitions.map(
-	(provider) => provider.id,
-);
+export const languageModelProviderDefinitions = languageModels.map(model => model.provider)
+export const languageModelProviders = languageModelProviderDefinitions.map(provider => provider.id)
 
-export function isLanguageModelProvider(
-	provider: unknown,
-): provider is LanguageModelProvider {
-	return languageModelProviders.includes(provider as LanguageModelProvider);
+export function isLanguageModelProvider(provider: unknown): provider is LanguageModelProvider {
+  return languageModelProviders.includes(provider as LanguageModelProvider)
 }
 
-export type LanguageModelProvider = (typeof languageModelProviders)[number];
-export type LanguageModelProviderInfo =
-	(typeof languageModelProviderDefinitions)[number];
+export type LanguageModelProvider = (typeof languageModelProviders)[number]
+export type LanguageModelProviderInfo = (typeof languageModelProviderDefinitions)[number]
 
 export function getEntry(languageModelId: LanguageModelId) {
-	const languageModel = languageModels.find(
-		(model) => model.id === languageModelId,
-	);
+  const languageModel = languageModels.find(model => model.id === languageModelId)
 
-	if (!languageModel) {
-		throw new Error(`Language model with ID ${languageModelId} not found`);
-	}
+  if (!languageModel) {
+    throw new Error(`Language model with ID ${languageModelId} not found`)
+  }
 
-	return languageModel;
+  return languageModel
 }

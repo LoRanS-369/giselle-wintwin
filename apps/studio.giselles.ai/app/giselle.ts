@@ -28,12 +28,26 @@ import {
 } from "../lib/vector-stores/github";
 import type { generateContentJob } from "../trigger/generate-content-job";
 
-const storage = experimental_supabaseStorageDriver({
-	endpoint: process.env.SUPABASE_STORAGE_URL ?? "",
-	region: process.env.SUPABASE_STORAGE_REGION ?? "",
-	accessKeyId: process.env.SUPABASE_STORAGE_ACCESS_KEY_ID ?? "",
-	secretAccessKey: process.env.SUPABASE_STORAGE_SECRET_ACCESS_KEY ?? "",
-	bucket: "app",
+// Lazy storage initialization to avoid AWS S3 client creation during build time
+let _storage: ReturnType<typeof experimental_supabaseStorageDriver> | null = null;
+function getStorage() {
+	if (!_storage) {
+		_storage = experimental_supabaseStorageDriver({
+			endpoint: process.env.SUPABASE_STORAGE_URL ?? "",
+			region: process.env.SUPABASE_STORAGE_REGION ?? "us-east-1",
+			accessKeyId: process.env.SUPABASE_STORAGE_ACCESS_KEY_ID ?? "",
+			secretAccessKey: process.env.SUPABASE_STORAGE_SECRET_ACCESS_KEY ?? "",
+			bucket: "app",
+		});
+	}
+	return _storage;
+}
+
+// Create a proxy for lazy storage access
+const storage = new Proxy({} as ReturnType<typeof experimental_supabaseStorageDriver>, {
+	get(_, prop) {
+		return (getStorage() as Record<string, unknown>)[prop as string];
+	},
 });
 
 const vault = supabaseVaultDriver({
@@ -58,21 +72,38 @@ if (process.env.SAMPLE_APP_WORKSPACE_IDS) {
 	}
 }
 
-const githubAppId = process.env.GITHUB_APP_ID;
-const githubAppPrivateKey = process.env.GITHUB_APP_PRIVATE_KEY;
-const githubAppClientId = process.env.GITHUB_APP_CLIENT_ID;
-const githubAppClientSecret = process.env.GITHUB_APP_CLIENT_SECRET;
-const githubAppWebhookSecret = process.env.GITHUB_APP_WEBHOOK_SECRET;
+// Lazy GitHub credentials check - only validate at runtime
+function getGithubCredentials() {
+	const githubAppId = process.env.GITHUB_APP_ID;
+	const githubAppPrivateKey = process.env.GITHUB_APP_PRIVATE_KEY;
+	const githubAppClientId = process.env.GITHUB_APP_CLIENT_ID;
+	const githubAppClientSecret = process.env.GITHUB_APP_CLIENT_SECRET;
+	const githubAppWebhookSecret = process.env.GITHUB_APP_WEBHOOK_SECRET;
 
-if (
-	githubAppId === undefined ||
-	githubAppPrivateKey === undefined ||
-	githubAppClientId === undefined ||
-	githubAppClientSecret === undefined ||
-	githubAppWebhookSecret === undefined
-) {
-	throw new Error("missing github credentials");
+	if (
+		githubAppId === undefined ||
+		githubAppPrivateKey === undefined ||
+		githubAppClientId === undefined ||
+		githubAppClientSecret === undefined ||
+		githubAppWebhookSecret === undefined
+	) {
+		throw new Error("missing github credentials");
+	}
+	return {
+		githubAppId,
+		githubAppPrivateKey,
+		githubAppClientId,
+		githubAppClientSecret,
+		githubAppWebhookSecret,
+	};
 }
+
+// Placeholder values for build time - will be replaced at runtime
+const githubAppId = process.env.GITHUB_APP_ID ?? "placeholder";
+const githubAppPrivateKey = process.env.GITHUB_APP_PRIVATE_KEY ?? "placeholder";
+const githubAppClientId = process.env.GITHUB_APP_CLIENT_ID ?? "placeholder";
+const githubAppClientSecret = process.env.GITHUB_APP_CLIENT_SECRET ?? "placeholder";
+const githubAppWebhookSecret = process.env.GITHUB_APP_WEBHOOK_SECRET ?? "placeholder";
 
 type TeamForPlan = Pick<
 	CurrentTeam,

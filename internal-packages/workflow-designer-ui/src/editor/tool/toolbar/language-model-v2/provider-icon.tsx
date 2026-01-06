@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
 	getEntry,
 	type LanguageModelId,

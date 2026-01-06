@@ -1,98 +1,100 @@
-import * as z from "zod/v4";
+import * as z from "zod/v4"
 import {
-	LanguageModel as AnthropicLanguageModel,
-	models as anthropicLanguageModels,
-} from "./anthropic";
+  LanguageModel as AnthropicLanguageModel,
+  models as anthropicLanguageModels,
+} from "./anthropic"
+import { LanguageModel as FalLanguageModel, models as falLanguageModels } from "./fal"
+import { LanguageModel as GoogleLanguageModel, models as googleLanguageModels } from "./google"
 import {
-	LanguageModel as FalLanguageModel,
-	models as falLanguageModels,
-} from "./fal";
+  LanguageModel as GoogleImageLanguageModel,
+  models as googleImageLanguageModels,
+} from "./google-image"
+import { LanguageModel as OpenAILanguageModel, models as openaiLanguageModels } from "./openai"
 import {
-	LanguageModel as GoogleLanguageModel,
-	models as googleLanguageModels,
-} from "./google";
+  LanguageModel as OpenAIImageLanguageModel,
+  models as openaiImageLanguageModels,
+} from "./openai-image"
 import {
-	LanguageModel as GoogleImageLanguageModel,
-	models as googleImageLanguageModels,
-} from "./google-image";
+  LanguageModel as OpenRouterLanguageModel,
+  models as openRouterLanguageModels,
+} from "./openrouter"
 import {
-	LanguageModel as OpenAILanguageModel,
-	models as openaiLanguageModels,
-} from "./openai";
-import {
-	LanguageModel as OpenAIImageLanguageModel,
-	models as openaiImageLanguageModels,
-} from "./openai-image";
-import {
-	LanguageModel as PerplexityLanguageModel,
-	models as perplexityLanguageModels,
-} from "./perplexity";
+  LanguageModel as PerplexityLanguageModel,
+  models as perplexityLanguageModels,
+} from "./perplexity"
 
-export * from "./base";
-export * from "./costs";
-export type { GeneratedImageData } from "./fal";
+export * from "./base"
+export * from "./costs"
+export type { GeneratedImageData } from "./fal"
 export {
-	falImageGenerationSizes as imageGenerationSizes,
-	getImageGenerationModelProvider,
-} from "./fal";
-export * from "./helper";
+  falImageGenerationSizes as imageGenerationSizes,
+  getImageGenerationModelProvider,
+} from "./fal"
+export * from "./helper"
 export {
-	background as openaiImageBackground,
-	models as openaiImageModels,
-	moderation as openaiImageModeration,
-	quality as openaiImageQuality,
-	size as openaiImageSize,
-} from "./openai-image";
-export { createUsageCalculator } from "./usage-factory";
+  background as openaiImageBackground,
+  models as openaiImageModels,
+  moderation as openaiImageModeration,
+  quality as openaiImageQuality,
+  size as openaiImageSize,
+} from "./openai-image"
+export { createUsageCalculator } from "./usage-factory"
 
 export const LanguageModel = z.union([
-	AnthropicLanguageModel,
-	GoogleLanguageModel,
-	GoogleImageLanguageModel,
-	OpenAILanguageModel,
-	OpenAIImageLanguageModel,
-	PerplexityLanguageModel,
-	FalLanguageModel,
-]);
-export type LanguageModel = z.infer<typeof LanguageModel>;
+  AnthropicLanguageModel,
+  GoogleLanguageModel,
+  GoogleImageLanguageModel,
+  OpenAILanguageModel,
+  OpenAIImageLanguageModel,
+  PerplexityLanguageModel,
+  PerplexityLanguageModel,
+  FalLanguageModel,
+  OpenRouterLanguageModel,
+])
+export type LanguageModel = z.infer<typeof LanguageModel>
 
 export const languageModels = [
-	...googleLanguageModels,
-	...googleImageLanguageModels,
-	...anthropicLanguageModels,
-	...openaiLanguageModels,
-	...openaiImageLanguageModels,
-	...perplexityLanguageModels,
-	...falLanguageModels,
-];
+  ...googleLanguageModels,
+  ...googleImageLanguageModels,
+  ...anthropicLanguageModels,
+  ...openaiLanguageModels,
+  ...openaiImageLanguageModels,
+  ...perplexityLanguageModels,
+  ...falLanguageModels,
+  ...openRouterLanguageModels,
+]
 
 export {
-	AnthropicLanguageModel,
-	GoogleLanguageModel,
-	GoogleImageLanguageModel,
-	OpenAILanguageModel,
-	OpenAIImageLanguageModel,
-	PerplexityLanguageModel,
-	FalLanguageModel,
-	anthropicLanguageModels,
-	googleLanguageModels,
-	googleImageLanguageModels,
-	openaiLanguageModels,
-	perplexityLanguageModels,
-	falLanguageModels,
-};
+  AnthropicLanguageModel,
+  GoogleLanguageModel,
+  GoogleImageLanguageModel,
+  OpenAILanguageModel,
+  OpenAIImageLanguageModel,
+  PerplexityLanguageModel,
+  FalLanguageModel,
+  OpenRouterLanguageModel,
+  anthropicLanguageModels,
+  googleLanguageModels,
+  googleImageLanguageModels,
+  openaiLanguageModels,
+  perplexityLanguageModels,
+  falLanguageModels,
+  openRouterLanguageModels,
+}
 
 export const LanguageModelProviders = z.enum([
-	AnthropicLanguageModel.shape.provider.value,
-	GoogleLanguageModel.shape.provider.value,
-	GoogleImageLanguageModel.shape.provider.value,
-	OpenAILanguageModel.shape.provider.value,
-	OpenAIImageLanguageModel.shape.provider.value,
-	PerplexityLanguageModel.shape.provider.value,
-	FalLanguageModel.shape.provider.value,
-]);
-export type LanguageModelProvider = z.infer<typeof LanguageModelProviders>;
+  AnthropicLanguageModel.shape.provider.value,
+  GoogleLanguageModel.shape.provider.value,
+  GoogleImageLanguageModel.shape.provider.value,
+  OpenAILanguageModel.shape.provider.value,
+  OpenAIImageLanguageModel.shape.provider.value,
+  PerplexityLanguageModel.shape.provider.value,
+  FalLanguageModel.shape.provider.value,
+  OpenRouterLanguageModel.shape.provider.value,
+])
+export type LanguageModelProvider = z.infer<typeof LanguageModelProviders>
 
-export { AnthropicLanguageModelId } from "./anthropic";
-export { GoogleLanguageModelId } from "./google";
-export { OpenAILanguageModelId } from "./openai";
+export { AnthropicLanguageModelId } from "./anthropic"
+export { GoogleLanguageModelId } from "./google"
+export { OpenAILanguageModelId } from "./openai"
+export { OpenRouterLanguageModelId } from "./openrouter"
