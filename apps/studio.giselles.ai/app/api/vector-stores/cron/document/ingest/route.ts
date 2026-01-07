@@ -15,7 +15,7 @@ import type { NextRequest } from "next/server";
 import { ingestDocument } from "@/lib/vector-stores/document/ingest";
 import { fetchIngestTargets } from "./fetch-ingest-targets";
 
-export const maxDuration = 800;
+export const maxDuration = 300;
 export const dynamic = "force-dynamic";
 
 const bearerPrefix = "Bearer ";

@@ -10,7 +10,7 @@ import type { ActWithNavigation } from "../types";
 
 // The maximum duration of server actions on this page is extended to 800 seconds through enabled fluid compute.
 // https://vercel.com/docs/functions/runtimes#max-duration
-export const maxDuration = 800;
+export const maxDuration = 300;
 
 // This feature is currently under development and data structures change destructively,
 // so parsing of legacy data frequently fails. We're using a rough try-catch to ignore
