@@ -46,7 +46,7 @@ function getStorage() {
 // Create a proxy for lazy storage access
 const storage = new Proxy({} as ReturnType<typeof experimental_supabaseStorageDriver>, {
 	get(_, prop) {
-		return (getStorage() as Record<string, unknown>)[prop as string];
+		return (getStorage() as unknown as Record<string, unknown>)[prop as string];
 	},
 });
 
