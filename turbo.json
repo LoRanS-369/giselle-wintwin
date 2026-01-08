@@ -1,5 +1,6 @@
 {
 	"$schema": "https://turbo.build/schema.json",
+	"globalPassThroughEnv": ["AWS_REGION", "SENTRY_AUTH_TOKEN"],
 	"tasks": {
 		"build": {
 			"env": [
