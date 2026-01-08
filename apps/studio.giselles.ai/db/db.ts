@@ -28,7 +28,7 @@ function getDb() {
 
 	const pool = new Pool({
 		connectionString,
-		ssl: true, // Force SSL for Neon
+		ssl: { rejectUnauthorized: false }, // Force SSL for Neon
 	});
 
 	dbInstance = drizzle(pool, { schema, logger: false });
