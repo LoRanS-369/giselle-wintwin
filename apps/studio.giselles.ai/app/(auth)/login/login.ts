@@ -9,36 +9,48 @@ export async function login(
 	_prevState: AuthError | null,
 	formData: FormData,
 ): Promise<AuthError | null> {
-	const supabase = await createClient();
+	try {
+		const supabase = await createClient();
 
-	const emailEntry = formData.get("email");
-	const passwordEntry = formData.get("password");
-	if (typeof emailEntry !== "string" || typeof passwordEntry !== "string") {
+		const emailEntry = formData.get("email");
+		const passwordEntry = formData.get("password");
+		if (typeof emailEntry !== "string" || typeof passwordEntry !== "string") {
+			return createAuthError({
+				code: "invalid_credentials_payload",
+				message: "Please enter both email and password.",
+				name: "AuthValidationError",
+				status: 400,
+			});
+		}
+		const credentials = {
+			email: emailEntry,
+			password: passwordEntry,
+		};
+		const returnUrlEntry = formData.get("returnUrl");
+		const { error } = await supabase.auth.signInWithPassword(credentials);
+
+		if (error) {
+			return createAuthError(error);
+		}
+
+		const isStageEnabled = await stageFlag();
+		const fallbackUrl = isStageEnabled ? "/playground" : "/workspaces";
+
+		// Validate returnUrl to prevent open redirect attacks
+		const validReturnUrl = isValidReturnUrl(returnUrlEntry)
+			? returnUrlEntry
+			: fallbackUrl;
+		redirect(validReturnUrl);
+	} catch (error) {
+		if (error instanceof Error && error.message === "NEXT_REDIRECT") {
+			throw error;
+		}
 		return createAuthError({
-			code: "invalid_credentials_payload",
-			message: "Please enter both email and password.",
-			name: "AuthValidationError",
-			status: 400,
+			code: "internal_server_error",
+			message: "An unexpected error occurred during login.",
+			name: "InternalServerError",
+			status: 500,
 		});
 	}
-	const credentials = {
-		email: emailEntry,
-		password: passwordEntry,
-	};
-	const returnUrlEntry = formData.get("returnUrl");
-	const { error } = await supabase.auth.signInWithPassword(credentials);
-
-	if (error) {
-		return createAuthError(error);
-	}
-
-	const isStageEnabled = await stageFlag();
-	const fallbackUrl = isStageEnabled ? "/playground" : "/workspaces";
-
-	// Validate returnUrl to prevent open redirect attacks
-	const validReturnUrl = isValidReturnUrl(returnUrlEntry)
-		? returnUrlEntry
-		: fallbackUrl;
-	redirect(validReturnUrl);
 	return null;
 }
