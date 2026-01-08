@@ -9,7 +9,8 @@ let dbInstance: NodePgDatabase<typeof schema> | null = null;
 function getDb() {
 	if (dbInstance) return dbInstance;
 
-	const connectionString = process.env.POSTGRES_URL;
+	const connectionString =
+		process.env.POSTGRES_URL_NON_POOLING || process.env.POSTGRES_URL;
 
 	if (
 		!connectionString ||
