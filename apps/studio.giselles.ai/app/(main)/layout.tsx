@@ -4,6 +4,7 @@ import { db, supabaseUserMappings } from "@/db";
 import { getUser } from "@/lib/supabase";
 import { initializeAccount } from "@/services/accounts";
 import { eq } from "drizzle-orm";
+import { redirect } from "next/navigation";
 import { Header } from "./ui/header";
 import { Sidebar } from "./ui/sidebar";
 import { TaskOverlay } from "./ui/task-overlay";
@@ -28,8 +29,10 @@ export default async function Layout({
 			}
 		}
 	} catch (error) {
-		// Ignore errors here, let downstream components handle auth failures
 		console.error("Failed to check/initialize account in layout:", error);
+		// Redirect to login with error details to expose the failure reason
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		redirect(`/login?error=AccountInitFailed&details=${encodeURIComponent(errorMessage)}`);
 	}
 
 	return (

@@ -32,7 +32,13 @@ export async function GET() {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
     append("NEXT_PUBLIC_SITE_URL value", process.env.NEXT_PUBLIC_SITE_URL);
   } else {
-    append("POSTGRES_URL is missing!");
+    append("NEXT_PUBLIC_SITE_URL is missing!");
+  }
+
+  append("Checking Encryption Keys...");
+  append("TOKEN_ENCRYPTION_KEY defined?", !!process.env.TOKEN_ENCRYPTION_KEY);
+  if (process.env.TOKEN_ENCRYPTION_KEY) {
+      append("TOKEN_ENCRYPTION_KEY length", process.env.TOKEN_ENCRYPTION_KEY.length);
   }
 
   try {
