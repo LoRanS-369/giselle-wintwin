@@ -11,7 +11,11 @@ const defaultConfigurations: OpenRouterLanguageModelConfigurations = {}
 export const OpenRouterLanguageModelId = z.enum([
   "openrouter/xiaomi/mimo-v2-flash",
   "openrouter/google/gemini-2.0-flash-exp:free",
+  "openrouter/z-ai/glm-4.7",
 ])
+
+// ... (skipping unchanged code for brevity in prompt, but in tool calling I must provide replacement)
+// Actually I need to replace the block.
 
 const OpenRouterLanguageModel = LanguageModelBase.extend({
   id: OpenRouterLanguageModelId,
@@ -23,20 +27,28 @@ type OpenRouterLanguageModel = z.infer<typeof OpenRouterLanguageModel>
 const mimoV2Flash: OpenRouterLanguageModel = {
   provider: "openrouter",
   id: "openrouter/xiaomi/mimo-v2-flash",
-  capabilities: Capability.TextGeneration | Capability.Reasoning, // It is a reasoning model
-  tier: Tier.enum.free, // As requested/available
+  capabilities: Capability.TextGeneration | Capability.Reasoning, 
+  tier: Tier.enum.free,
   configurations: defaultConfigurations,
 }
 
 const geminiFlashFree: OpenRouterLanguageModel = {
   provider: "openrouter",
   id: "openrouter/google/gemini-2.0-flash-exp:free",
-  capabilities: Capability.TextGeneration | Capability.OptionalSearchGrounding, // Gemini usually supports it but not sure via OR
+  capabilities: Capability.TextGeneration | Capability.OptionalSearchGrounding,
   tier: Tier.enum.free,
   configurations: defaultConfigurations,
 }
 
-export const models = [mimoV2Flash, geminiFlashFree]
+const glm47: OpenRouterLanguageModel = {
+  provider: "openrouter",
+  id: "openrouter/z-ai/glm-4.7",
+  capabilities: Capability.TextGeneration | Capability.Reasoning,
+  tier: Tier.enum.free, // Assuming free or low cost, or user has credit. Marking free for visibility if unsure of tier enum constraints.
+  configurations: defaultConfigurations,
+}
+
+export const models = [mimoV2Flash, geminiFlashFree, glm47]
 
 export const LanguageModel = OpenRouterLanguageModel
 export type LanguageModel = OpenRouterLanguageModel

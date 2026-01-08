@@ -190,7 +190,7 @@ const generateContentProcessor =
 export const giselle = NextGiselle({
 	basePath: "/api/giselle",
 	storage,
-	llmProviders: ["openai", "anthropic", "google"],
+	llmProviders: ["openai", "anthropic", "google", "openrouter"],
 	onConsumeAgentTime,
 	fetchUsageLimitsFn: fetchUsageLimits,
 	sampleAppWorkspaceIds,
