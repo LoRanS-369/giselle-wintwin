@@ -163,9 +163,7 @@ export async function createSampleWorkspaces(args: {
 		!args.context.sampleAppWorkspaceIds ||
 		args.context.sampleAppWorkspaceIds.length === 0
 	) {
-		throw new Error(
-			"sampleAppWorkspaceIds is required and must contain at least one workspace ID",
-		);
+		return [];
 	}
 
 	const results = await Promise.all(
