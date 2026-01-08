@@ -23,6 +23,14 @@ export async function GET() {
   if (url) {
     // mask password
     append("POSTGRES_URL host", url.split("@")[1]?.split("/")[0]);
+  }
+
+  append("Checking Supabase Environment Variables...");
+  append("NEXT_PUBLIC_SUPABASE_URL defined?", !!process.env.NEXT_PUBLIC_SUPABASE_URL);
+  append("NEXT_PUBLIC_SUPABASE_ANON_KEY defined?", !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  append("NEXT_PUBLIC_SITE_URL defined?", !!process.env.NEXT_PUBLIC_SITE_URL);
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    append("NEXT_PUBLIC_SITE_URL value", process.env.NEXT_PUBLIC_SITE_URL);
   } else {
     append("POSTGRES_URL is missing!");
   }
