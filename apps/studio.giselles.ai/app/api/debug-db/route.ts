@@ -1,0 +1,46 @@
+
+import { db, supabaseUserMappings } from "@/db";
+import { users } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { NextResponse } from "next/server";
+
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  const result: any[] = [];
+  const append = (msg: string, data?: any) => {
+    console.log(msg, data);
+    result.push({ msg, data });
+  };
+
+  append("Checking Environment Variables...");
+  const url = process.env.POSTGRES_URL;
+  append("POSTGRES_URL defined?", !!url);
+  if (url) {
+    // mask password
+    append("POSTGRES_URL host", url.split("@")[1]?.split("/")[0]);
+  } else {
+    append("POSTGRES_URL is missing!");
+  }
+
+  try {
+    append("Test 1: Simple Select from users...");
+    const userCount = await db.select({ count: users.dbId }).from(users).limit(1);
+    append("Success Test 1", userCount);
+  } catch (e: any) {
+    append("Error Test 1", { message: e.message, stack: e.stack });
+  }
+
+  try {
+    append("Test 2: Query Builder findFirst...");
+    const mapping = await db.query.supabaseUserMappings.findFirst();
+    append("Success Test 2", mapping);
+  } catch (e: any) {
+    append("Error Test 2", { message: e.message, stack: e.stack });
+  }
+
+  return NextResponse.json({
+    status: "ok",
+    results: result,
+  });
+}

@@ -1,10 +1,37 @@
 import { ToastProvider } from "@giselle-internal/ui/toast";
 import { SentryUserWrapper } from "@/components/sentry-user-wrapper";
+import { db, supabaseUserMappings } from "@/db";
+import { getUser } from "@/lib/supabase";
+import { initializeAccount } from "@/services/accounts";
+import { eq } from "drizzle-orm";
 import { Header } from "./ui/header";
 import { Sidebar } from "./ui/sidebar";
 import { TaskOverlay } from "./ui/task-overlay";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+	children,
+}: { children: React.ReactNode }) {
+	// Auto-initialize account if needed (e.g. email verification flow)
+	try {
+		const user = await getUser();
+		if (user) {
+			const dbUser = await db.query.supabaseUserMappings.findFirst({
+				where: eq(supabaseUserMappings.supabaseUserId, user.id),
+			});
+
+			if (!dbUser) {
+				await initializeAccount(
+					user.id,
+					user.email,
+					user.user_metadata?.avatar_url,
+				);
+			}
+		}
+	} catch (error) {
+		// Ignore errors here, let downstream components handle auth failures
+		console.error("Failed to check/initialize account in layout:", error);
+	}
+
 	return (
 		<SentryUserWrapper>
 			<ToastProvider>

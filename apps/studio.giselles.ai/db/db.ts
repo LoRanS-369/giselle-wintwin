@@ -1,38 +1,49 @@
 
-import { sql } from "@vercel/postgres";
-import { drizzle, type VercelPgDatabase } from "drizzle-orm/vercel-postgres";
+import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
 import * as schema from "./schema";
 
-// We export a "lazy" db instance. 
-let dbInstance: VercelPgDatabase<typeof schema> | null = null;
+// We export a "lazy" db instance.
+let dbInstance: NodePgDatabase<typeof schema> | null = null;
 
 function getDb() {
-    if (dbInstance) return dbInstance;
-    
-    const url = process.env.POSTGRES_URL;
+	if (dbInstance) return dbInstance;
 
-    if (!url || url.trim() === "" || url === "undefined") {
-        // Build time safe guard - return a proxy that throws on actual access.
-        return new Proxy({} as VercelPgDatabase<typeof schema>, {
-            get: (_target, prop) => {
-                throw new Error(`POSTGRES_URL is missing or invalid. Cannot access database property: ${String(prop)}`);
-            }
-        });
-    }
+	const connectionString = process.env.POSTGRES_URL;
 
-    dbInstance = drizzle(sql, { schema, logger: false });
-    return dbInstance;
+	if (
+		!connectionString ||
+		connectionString.trim() === "" ||
+		connectionString === "undefined"
+	) {
+		// Build time safe guard - return a proxy that throws on actual access.
+		return new Proxy({} as NodePgDatabase<typeof schema>, {
+			get: (_target, prop) => {
+				throw new Error(
+					`POSTGRES_URL is missing or invalid. Cannot access database property: ${String(prop)}`,
+				);
+			},
+		});
+	}
+
+	const pool = new Pool({
+		connectionString,
+		ssl: true, // Force SSL for Neon
+	});
+
+	dbInstance = drizzle(pool, { schema, logger: false });
+	return dbInstance;
 }
 
-export const db = new Proxy({} as VercelPgDatabase<typeof schema>, {
-    get: (_target, prop) => {
-        const instance = getDb();
-        // @ts-ignore
-        const value = instance[prop];
-        if (typeof value === "function") {
-            // @ts-ignore
-            return value.bind(instance);
-        }
-        return value;
-    }
+export const db = new Proxy({} as NodePgDatabase<typeof schema>, {
+	get: (_target, prop) => {
+		const instance = getDb();
+		// @ts-ignore
+		const value = instance[prop];
+		if (typeof value === "function") {
+			// @ts-ignore
+			return value.bind(instance);
+		}
+		return value;
+	},
 });
