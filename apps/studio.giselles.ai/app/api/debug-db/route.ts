@@ -15,7 +15,11 @@ export async function GET() {
 
   append("Checking Environment Variables...");
   const url = process.env.POSTGRES_URL;
+  const nonPoolingUrl = process.env.POSTGRES_URL_NON_POOLING; // Check explicit non-pooling var
+  
   append("POSTGRES_URL defined?", !!url);
+  append("POSTGRES_URL_NON_POOLING defined?", !!nonPoolingUrl);
+
   if (url) {
     // mask password
     append("POSTGRES_URL host", url.split("@")[1]?.split("/")[0]);
