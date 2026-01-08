@@ -38,8 +38,8 @@ export async function getGitHubIdentityState(): Promise<GitHubIdentityState> {
 		return { status: "unauthorized" };
 	}
 
-	const gitHubUserClient = buildGitHubUserClient(credential);
 	try {
+		const gitHubUserClient = buildGitHubUserClient(credential);
 		const gitHubUser = await gitHubUserClient.getUser();
 		const supabaseUser = await getUser();
 		const unlinkable =
