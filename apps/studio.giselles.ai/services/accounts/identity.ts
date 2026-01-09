@@ -9,7 +9,9 @@ type OAuthOptionOverrides = {
 };
 
 const providerOptionOverrides: Record<OAuthProvider, OAuthOptionOverrides> = {
-	github: {},
+	github: {
+		scopes: ["repo", "read:user", "user:email"],
+	},
 	google: {
 		queryParams: {
 			access_type: "offline",
